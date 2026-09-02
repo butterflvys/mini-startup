@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Settings - RE-LOOP</title>
+    <meta name="description" content="Pengaturan Akun Pengguna RE-LOOP Marketplace.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Standalone Profile Page Layout */
+        body {
+            background-color: #F8FAFC;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .profile-page-wrapper {
+            flex: 1;
+            padding: 32px 0 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .standalone-profile-container {
+            width: 100%;
+            max-width: 1080px;
+            min-height: 680px;
+            background: #FFFFFF;
+            border-radius: 24px;
+            border: 1px solid #E2E8F0;
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.05);
+            display: flex;
+            overflow: hidden;
+        }
+
+        .profile-main-content {
+            padding-top: 36px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Top Announcement Bar -->
+    <div class="top-announcement-bar">
+        <div class="container announcement-content">
+            <i class="ri-truck-line"></i>
+            <span>Free Shipping on Orders Over $99</span>
+        </div>
+    </div>
+
+    <!-- Main Header Navigation (Same as Home) -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <!-- Brand Logo -->
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <img src="assets/logo.png" alt="RE-LOOP Logo">
+                </div>
+                <div class="logo-text">
+                    <span class="brand-title">RE - LOOP</span>
+                </div>
+            </a>
+
+            <!-- Nav Links -->
+            <nav class="nav-menu" id="navMenu">
+                <a href="index.html#hero" class="nav-link">Home</a>
+                <a href="index.html#hanya-untukmu" class="nav-link">Shop</a>
+                <div class="nav-dropdown">
+                    <a href="index.html#kategori" class="nav-link">Categories</a>
+                </div>
+                <a href="index.html#fitur" class="nav-link nav-ai-link">
+                    <i class="ri-sparkles-fill ai-sparkle-icon"></i> AI Rekomendasi
+                </a>
+                <a href="index.html#campaign" class="nav-link">About</a>
+                <a href="index.html#footer" class="nav-link">Contact</a>
+            </nav>
+
+            <!-- Nav Search Bar -->
+            <div class="nav-search-wrapper">
+                <input type="text" id="quickSearchInput" placeholder="Search products...">
+                <button class="nav-search-btn" id="quickSearchBtn" title="Search"><i class="ri-search-line"></i></button>
+            </div>
+            <div class="nav-actions">
+                <button class="action-icon-btn" id="cartBtn" title="Keranjang Belanja">
+                    <i class="ri-shopping-cart-2-line"></i>
+                    <span class="cart-count">0</span>
+                </button>
+                <div class="notif-btn-wrapper">
+                    <button class="action-icon-btn" title="Notifikasi"><i class="ri-notification-3-line"></i></button>
+                </div>
+                <a href="login.html" class="action-icon-btn" id="userProfileBtn" title="Masuk ke Akun">
+                    <i class="ri-user-3-line"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Profile Content Wrapper -->
+    <div class="container profile-page-wrapper">
+        <div class="standalone-profile-container">
+            <!-- Sidebar (Left) -->
+            <aside class="profile-sidebar">
+                <a href="index.html" class="profile-back-btn">
+                    <i class="ri-arrow-left-s-line"></i> Back
+                </a>
+
+                <nav class="profile-menu">
+                    <!-- Expandable Group: General -->
+                    <div class="menu-group">
+                        <div class="menu-group-header">
+                            <span><i class="ri-settings-4-line"></i> General</span>
+                            <i class="ri-arrow-down-s-line"></i>
+                        </div>
+                        <ul class="menu-sub-items">
+                            <li><a href="#" class="profile-tab-link active" data-tab="account"><i
+                                        class="ri-user-line"></i> Account</a></li>
+                            <li><a href="#" class="profile-tab-link" data-tab="password"><i class="ri-key-2-line"></i>
+                                    Password</a></li>
+                            <li><a href="#" class="profile-tab-link" data-tab="connected"><i class="ri-links-line"></i>
+                                    Connected accounts</a></li>
+                            <li><a href="#" class="profile-tab-link" data-tab="sessions"><i class="ri-macbook-line"></i>
+                                    Sessions</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Single Menu Items -->
+                    <a href="#" class="menu-single-item profile-tab-link" data-tab="billing">
+                        <i class="ri-bank-card-line"></i> Billing
+                    </a>
+                    <a href="#" class="menu-single-item profile-tab-link" data-tab="credits">
+                        <i class="ri-gift-line"></i> Credits
+                    </a>
+                    <a href="#" class="menu-single-item profile-tab-link" data-tab="integrations">
+                        <i class="ri-apps-2-line"></i> Integrations
+                    </a>
+                    <a href="#" class="menu-single-item profile-tab-link" data-tab="appearance">
+                        <i class="ri-palette-line"></i> Appearance
+                    </a>
+                    <a href="#" class="menu-single-item profile-tab-link" data-tab="notifications">
+                        <i class="ri-notification-3-line"></i> Notifications
+                    </a>
+                    <a href="#" class="menu-single-item profile-tab-link" data-tab="archives">
+                        <i class="ri-archive-line"></i> Archives
+                    </a>
+                    <a href="login.html" class="menu-single-item" style="color: #EF4444; margin-top: 16px; border-top: 1px solid #E2E8F0; padding-top: 12px;">
+                        <i class="ri-logout-box-r-line"></i> Log Out
+                    </a>
+                </nav>
+            </aside>
+
+            <!-- Main Content Area (Right) - Top Breadcrumbs Removed as requested -->
+            <main class="profile-main-content">
+                <!-- Dynamic Tab Pane: Account -->
+                <div class="tab-pane active" id="tab-account">
+                    <h2 class="profile-page-title">Account</h2>
+
+                    <!-- Avatar Edit Section -->
+                    <div class="avatar-edit-wrapper">
+                        <div class="profile-avatar-box">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80"
+                                alt="Christopher Davis" id="userAvatarImg">
+                        </div>
+                        <button class="btn-edit-avatar" id="editAvatarBtn">Edit</button>
+                    </div>
+
+                    <!-- Form Inputs Grid -->
+                    <form class="profile-form-grid" id="standaloneProfileForm">
+                        <div class="form-group">
+                            <label class="form-label">Username</label>
+                            <input type="text" class="form-input" value="ChristDavis" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Full name</label>
+                            <input type="text" class="form-input" value="Christopher Davis" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-input" value="christopdev@gmail.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Time zone</label>
+                            <div class="select-wrapper">
+                                <select class="form-select">
+                                    <option selected>Europe/Rome (GMT +02:00)</option>
+                                    <option>Asia/Jakarta (GMT +07:00)</option>
+                                    <option>America/New_York (GMT -04:00)</option>
+                                    <option>Asia/Tokyo (GMT +09:00)</option>
+                                </select>
+                                <i class="ri-arrow-down-s-line select-arrow"></i>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Time format</label>
+                            <div class="select-wrapper">
+                                <select class="form-select">
+                                    <option selected>Browser default</option>
+                                    <option>12-hour (1:00 PM)</option>
+                                    <option>24-hour (13:00)</option>
+                                </select>
+                                <i class="ri-arrow-down-s-line select-arrow"></i>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Start of the week</label>
+                            <div class="select-wrapper">
+                                <select class="form-select">
+                                    <option selected>Sunady (Browser default)</option>
+                                    <option>Monday</option>
+                                </select>
+                                <i class="ri-arrow-down-s-line select-arrow"></i>
+                            </div>
+                        </div>
+                        <div class="form-group full-width">
+                            <label class="form-label">Language</label>
+                            <div class="select-wrapper">
+                                <select class="form-select">
+                                    <option selected>Browser default</option>
+                                    <option>Bahasa Indonesia</option>
+                                    <option>English (US)</option>
+                                </select>
+                                <i class="ri-arrow-down-s-line select-arrow"></i>
+                            </div>
+                        </div>
+
+                        <div class="form-actions full-width">
+                            <button type="submit" class="btn-dark-update" id="updateProfileBtn">Update</button>
+                        </div>
+                    </form>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-col brand-col">
+                <a href="index.html" class="footer-logo">
+                    <div class="logo-icon footer-logo-icon">
+                        <img src="assets/logo.png" alt="RE-LOOP Logo">
+                    </div>
+                    <span class="brand-title">RE - LOOP</span>
+                </a>
+                <p class="footer-about">
+                    Bandingkan harga & review produk terbaik dari berbagai marketplace Indonesia dalam satu platform
+                    pintar.
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-heading">SHOP</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html#hanya-untukmu">All Products</a></li>
+                    <li><a href="index.html#kategori">Categories</a></li>
+                    <li><a href="index.html#special-offer">Deals</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-heading">COMPANY</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html#campaign">About Us</a></li>
+                    <li><a href="index.html#footer">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof isUserLoggedIn === 'function' && !isUserLoggedIn()) {
+                alert('🔒 Akses Terbatas:\n\nSilakan login terlebih dahulu untuk membuka halaman akun.');
+                window.location.href = 'login.html';
+                return;
+            }
+
+            const profileTabLinks = document.querySelectorAll('.profile-tab-link');
+            const standaloneProfileForm = document.getElementById('standaloneProfileForm');
+
+            profileTabLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    profileTabLinks.forEach(l => l.classList.remove('active'));
+                    link.classList.add('active');
+                });
+            });
+
+            if (standaloneProfileForm) {
+                standaloneProfileForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    alert('✨ Perubahan profil telah berhasil disimpan!');
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
