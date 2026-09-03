@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RE-LOOP | Platform Bandingkan Harga & Review Marketplace Indonesia</title>
+    <meta name="description"
+        content="Bandingkan harga barang impian Anda dari Tokopedia, Shopee, Blibli, Lazada, dan marketplace Indonesia lainnya. Dilengkapi analisis review pintar AI.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500&display=swap"
+        rel="stylesheet">
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Top Announcement Bar -->
+    <div class="top-announcement-bar">
+        <div class="container announcement-content">
+            <i class="ri-truck-line"></i>
+            <span>Free Shipping on Orders Over $99</span>
+        </div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <!-- Brand Logo (Original RE-LOOP logo preserved) -->
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <img src="assets/logo.png" alt="logo">
+                </div>
+                <div class="logo-text">
+                    <span class="brand-title">RE - LOOP</span>
+                </div>
+            </a>
+
+            <!-- Nav Links -->
+                        <nav class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="shop.html" class="nav-link" id="shopNavLink">Shop</a>
+                <div class="nav-dropdown">
+                    <a href="category.html" class="nav-link">Categories</a>
+                </div>
+                <a href="top-products.html" class="nav-link nav-ai-link">
+                    <i class="ri-sparkles-fill ai-sparkle-icon"></i> AI Rekomendasi
+                </a>
+                <a href="index.html#campaign" class="nav-link">About</a>
+                <a href="index.html#footer" class="nav-link">Contact</a>
+            </nav>
+
+            <!-- Nav Search Bar -->
+            <div class="nav-search-wrapper">
+                <input type="text" id="quickSearchInput" placeholder="Search products...">
+                <button class="nav-search-btn" title="Search">
+                    <i class="ri-search-line"></i>
+                </button>
+            </div>
+
+            <!-- Right: Cart + Notification + Profile -->
+            <div class="nav-actions">
+                <button class="action-icon-btn" id="cartBtn" title="Shopping Cart">
+                    <i class="ri-shopping-cart-2-line"></i>
+                    <span class="cart-count">2</span>
+                </button>
+                <button class="action-icon-btn" title="Notifications">
+                    <i class="ri-notification-3-line"></i>
+                </button>
+                <a href="login.html" class="action-icon-btn" id="userProfileBtn" title="Login to Account">
+                    <i class="ri-user-3-line"></i>
+                </a>
+            </div>
+        </div>
+    </header>

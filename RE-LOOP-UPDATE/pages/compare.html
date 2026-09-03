@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="comparePageTitle">Perbandingan Harga Pasar - Apple iPhone 15 128GB | RE-LOOP</title>
+    <meta name="description"
+        content="Bandingkan harga real-time Apple iPhone 15 128GB di Tokopedia, Shopee, Blibli, Lazada, dan Bukalapak. Temukan penawaran termurah dan cashback terbesar.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500&display=swap"
+        rel="stylesheet">
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body class="compare-page-body">
+    <!-- Top Announcement Bar -->
+    <div class="top-announcement-bar">
+        <div class="container announcement-content">
+            <i class="ri-truck-line"></i>
+            <span>Free Shipping on Orders Over $99</span>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="../index.html" class="logo">
+                <div class="logo-icon"><img src="../assets/logo.png" alt="RE-LOOP Logo"></div>
+                <div class="logo-text"><span class="brand-title">RE - LOOP</span></div>
+            </a>
+                        <nav class="nav-menu" id="navMenu">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="shop.html" class="nav-link" id="shopNavLink">Shop</a>
+                <div class="nav-dropdown">
+                    <a href="category.html" class="nav-link">Categories</a>
+                </div>
+                <a href="top-products.html" class="nav-link nav-ai-link">
+                    <i class="ri-sparkles-fill ai-sparkle-icon"></i> AI Rekomendasi
+                </a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            <div class="nav-search-wrapper">
+                <input type="text" id="quickSearchInput" placeholder="Search products...">
+                <button class="nav-search-btn" id="quickSearchBtn" title="Search"><i class="ri-search-line"></i></button>
+            </div>
+            <div class="nav-actions">
+                <button class="action-icon-btn" id="cartBtn" title="Shopping Cart">
+                    <i class="ri-shopping-cart-2-line"></i>
+                    <span class="cart-count">0</span>
+                </button>
+                <div class="notif-btn-wrapper">
+                    <button class="action-icon-btn" title="Notifications"><i class="ri-notification-3-line"></i></button>
+                </div>
+                <a href="login.html" class="action-icon-btn" id="userProfileBtn" title="Login to Account">
+                    <i class="ri-user-3-line"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="compare-main-container">
+        <div class="container">
+            <!-- Top Navigation Bar (Back Button + Real-Time Status) -->
+            <div class="compare-top-nav">
+                <a href="product-detail.html?id=1" id="compareBackLink" class="compare-back-btn">
+                    <i class="ri-arrow-left-line"></i>
+                    <span>Kembali ke Detail Produk</span>
+                </a>
+                <div class="live-update-badge">
+                    <span class="pulse-indicator"></span>
+                    <span>Live Tracking: Diperbarui 5 menit lalu</span>
+                </div>
+            </div>
+
+            <!-- Product Header Summary Card -->
+            <section class="compare-product-banner">
+                <div class="compare-banner-left">
+                    <div class="compare-banner-img-box">
+                        <img src="https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&w=600&q=80"
+                            alt="Apple iPhone 15 128GB Silver Titanium" id="compareProductImg">
+                    </div>
+                    <div class="compare-banner-info">
+                        <div class="compare-category-tag" id="compareCategoryTag">Gadget & Smartphone</div>
+                        <h1 class="compare-product-title" id="compareProductTitle">Apple iPhone 15 128GB Silver Titanium</h1>
+                        <div class="compare-meta-row">
+                            <div class="stars-gold-mini">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-half-fill"></i>
+                                <span class="score-text" id="compareRatingText">4.9 (147 reviews)</span>
+                            </div>
+                            <span class="meta-separator">•</span>
+                            <span class="ai-score-pill"><i class="ri-flashlight-fill"></i> Skor AI: <strong id="compareAiScore">92/100</strong></span>
+                            <span class="meta-separator">•</span>
+                            <span class="compare-variant-pill" id="compareVariantPill">Varian 128GB Resmi</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="compare-banner-right">
+                    <span class="lowest-label">Harga Terbaik Ditemukan</span>
+                    <div class="lowest-price-val" id="compareLowestPriceVal">Rp 12.249.000</div>
+                    <div class="lowest-source-text" id="compareLowestSource">di Tokopedia - Official Store</div>
+                </div>
+            </section>
+
+            <!-- 3 Key Metric Stats Cards -->
+            <section class="compare-stats-grid">
+                <!-- Stat 1: Harga Termurah -->
+                <div class="compare-stat-card card-best-price">
+                    <div class="stat-card-icon icon-green">
+                        <i class="ri-price-tag-3-fill"></i>
+                    </div>
+                    <div class="stat-card-content">
+                        <span class="stat-card-label">Harga Termurah Saat Ini</span>
+                        <h3 class="stat-card-value text-green" id="statLowestPrice">Rp 12.249.000</h3>
+                        <p class="stat-card-sub" id="statSavings">Hemat Rp 2.450.000 (-20%) dari harga pasaran</p>
+                    </div>
+                </div>
+
+                <!-- Stat 2: Rata-rata Pasar -->
+                <div class="compare-stat-card">
+                    <div class="stat-card-icon icon-blue">
+                        <i class="ri-scales-3-line"></i>
+                    </div>
+                    <div class="stat-card-content">
+                        <span class="stat-card-label">Rata-rata Harga Pasar</span>
+                        <h3 class="stat-card-value text-slate" id="statAvgPrice">Rp 14.699.000</h3>
+                        <p class="stat-card-sub">Dihitung dari 5 marketplace terverifikasi</p>
+                    </div>
+                </div>
+
+                <!-- Stat 3: Rekomendasi Terbaik AI -->
+                <div class="compare-stat-card card-ai-pick">
+                    <div class="stat-card-icon icon-orange">
+                        <i class="ri-sparkles-fill"></i>
+                    </div>
+                    <div class="stat-card-content">
+                        <span class="stat-card-label">Rekomendasi Pilihan Cerdas AI</span>
+                        <h3 class="stat-card-value text-orange" id="statAiBestStore">Tokopedia Official</h3>
+                        <p class="stat-card-sub">Kombinasi Lowest Price + Garansi Resmi TAM + Cashback</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Filter and Sort Control Toolbar -->
+            <section class="compare-toolbar">
+
+
+                <div class="sort-select-wrapper">
+                    <i class="ri-sort-desc"></i>
+                    <select id="compareSortSelect" class="compare-sort-select">
+                        <option value="price-low">Sort by: Harga Termurah</option>
+                        <option value="price-high">Sort by: Highest Price</option>
+                        <option value="rating">Sort by: Rating Toko Tertinggi</option>
+                        <option value="cashback">Sort by: Cashback Terbesar</option>
+                    </select>
+                </div>
+            </section>
+
+            <!-- Marketplace Deals Cards Feed -->
+            <section class="marketplace-deals-feed" id="marketplaceDealsFeed">
+                <!-- Dynamic comparison store cards will be injected by JavaScript -->
+            </section>
+
+            <!-- Side-by-Side Service Matrix Table -->
+            <section class="service-matrix-section">
+                <div class="section-title-wrapper">
+                    <h2 class="matrix-title">Matriks Perbandingan Layanan Marketplace</h2>
+                    <p class="matrix-subtitle">Perbandingan menyeluruh garansi, ongkir, metode pembayaran, dan promo toko.</p>
+                </div>
+
+                <div class="matrix-table-container">
+                    <table class="matrix-table" id="matrixTable">
+                        <thead>
+                            <tr>
+                                <th>Marketplace & Toko</th>
+                                <th>Harga Bersih</th>
+                                <th>Status Toko</th>
+                                <th>Garansi</th>
+                                <th>Estimasi Pengiriman</th>
+                                <th>Opsi Pembayaran</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody id="matrixTableBody">
+                            <!-- Injected by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Price Alert & Drop Notification Card -->
+            <section class="price-alert-section">
+                <div class="price-alert-card">
+                    <div class="alert-content-left">
+                        <div class="alert-icon-box">
+                            <i class="ri-notification-3-fill"></i>
+                        </div>
+                        <div>
+                            <h3 class="alert-card-title">Pasang Alarm Turun Harga (Price Alert)</h3>
+                            <p class="alert-card-desc">
+                                Dapatkan Notifications otomatis instan via WhatsApp/Email saat harga produk ini turun ke target anggaran Anda.
+                            </p>
+                        </div>
+                    </div>
+
+                    <form class="alert-form-inline" id="priceAlertForm">
+                        <div class="alert-input-group">
+                            <span class="input-prefix">Rp</span>
+                            <input type="number" id="targetPriceInput" placeholder="Target harga (cth: 11.500.000)" required>
+                        </div>
+                        <input type="email" id="alertEmailInput" placeholder="Email Address Anda" required>
+                        <button type="submit" class="btn-set-alert" id="setAlertBtn">
+                            <i class="ri-bell-fill"></i> Pasang Notifications
+                        </button>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="container footer-container">
+            <div class="footer-col brand-col">
+                <a href="../index.html" class="footer-logo">
+                    <div class="logo-icon footer-logo-icon">
+                        <img src="../assets/logo.png" alt="RE-LOOP Logo">
+                    </div>
+                    <span class="brand-title">RE - LOOP</span>
+                </a>
+                <p class="footer-about">
+                    Smart marketplace comparison platform in Indonesia. Buy your dream products with AI review analysis and lowest price recommendations.
+                </p>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+                    <a href="#" aria-label="Twitter/X"><i class="ri-twitter-x-line"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="ri-youtube-line"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-heading">EXPLORE</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html#produk-terlaris">Compare</a></li>
+                    <li><a href="index.html#produk-terlaris">AI Recommendation</a></li>
+                    <li><a href="index.html#produk-terlaris">Trending Products</a></li>
+                    <li><a href="index.html#kategori">Categories</a></li>
+                    <li><a href="index.html#hanya-untukmu">Price Tracker</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-heading">SUPPORT</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Report A Problem</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-heading">OUR STORY</h4>
+                <ul class="footer-links">
+                    <li><a href="#">About Re-Loop</a></li>
+                    <li><a href="#">Our Technology</a></li>
+                    <li><a href="#">Expert Insights</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container footer-bottom-container">
+                <p>&copy; 2026 Re-Loop. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main Script -->
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
+
+

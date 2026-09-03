@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RE-LOOP | Platform Bandingkan Harga & Review Marketplace Indonesia</title>
+    <meta name="description"
+        content="Bandingkan harga barang impian Anda dari Tokopedia, Shopee, Blibli, Lazada, dan marketplace Indonesia lainnya. Dilengkapi analisis review pintar AI.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500&display=swap"
+        rel="stylesheet">
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Top Announcement Bar -->
+    <div class="top-announcement-bar">
+        <div class="container announcement-content">
+            <i class="ri-truck-line"></i>
+            <span>Free Shipping on Orders Over $99</span>
+        </div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <!-- Brand Logo (Original RE-LOOP logo preserved) -->
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <img src="assets/logo.png" alt="logo">
+                </div>
+                <div class="logo-text">
+                    <span class="brand-title">RE - LOOP</span>
+                </div>
+            </a>
+
+            <!-- Nav Links -->
+                        <nav class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="pages/shop.html" class="nav-link" id="shopNavLink">Shop</a>
+                <div class="nav-dropdown">
+                    <a href="pages/category.html" class="nav-link">Categories</a>
+                </div>
+                <a href="pages/top-products.html" class="nav-link nav-ai-link">
+                    <i class="ri-sparkles-fill ai-sparkle-icon"></i> AI Rekomendasi
+                </a>
+                <a href="pages/about.html" class="nav-link">About</a>
+                <a href="pages/contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <!-- Nav Search Bar -->
+            <div class="nav-search-wrapper">
+                <input type="text" id="quickSearchInput" placeholder="Search products...">
+                <button class="nav-search-btn" title="Search">
+                    <i class="ri-search-line"></i>
+                </button>
+            </div>
+
+            <!-- Right: Cart + Notification + Profile -->
+            <div class="nav-actions">
+                <button class="action-icon-btn" id="cartBtn" title="Shopping Cart">
+                    <i class="ri-shopping-cart-2-line"></i>
+                    <span class="cart-count">2</span>
+                </button>
+                <button class="action-icon-btn" title="Notifications">
+                    <i class="ri-notification-3-line"></i>
+                </button>
+                <a href="pages/login.html" class="action-icon-btn" id="userProfileBtn" title="Login to Account">
+                    <i class="ri-user-3-line"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" id="hero">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <i class="ri-flashlight-line"></i>
+                        <span>AUTOMATED PRICE COMPARISON</span>
+                    </div>
+                    <h1 class="hero-title">
+                        Good finds.<br>
+                        <span class="text-highlight">Better prices</span>
+                    </h1>
+                    <p class="hero-description">
+                        Bandingkan harga barang impian Anda dari berbagai marketplace Indonesia. Dilengkapi analisis
+                        review pintar dan biaya estimasi pengiriman.
+                    </p>
+
+                    <!-- Main Search Box -->
+                    <div class="search-box">
+                        <div class="search-input-wrapper">
+                            <i class="ri-search-2-line search-lead-icon"></i>
+                            <input type="text" id="heroSearchInput"
+                                placeholder="Ketik nama barang atau paste link marketplace di sini...">
+                        </div>
+                        <button class="btn btn-primary" id="heroSearchBtn">
+                            <span>Cari</span>
+                        </button>
+
+                    </div>
+                </div>
+
+                <!-- Hero Graphic Banner -->
+                <div class="hero-graphic">
+                    <div class="brand-emblem-wrapper">
+                        <div class="glow-backdrop"></div>
+                        <div class="brand-large-logo">
+                            <img src="assets/home.png" alt="home">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sponsor Ads Banner -->
+        <section class="sponsor-ads-section">
+            <div class="sponsor-ads-box">
+                ADS
+            </div>
+        </section>
+
+
+
+        <!-- Special Offer Banner Section -->
+        <section class="special-offer-section">
+            <div class="container">
+                <div class="offer-card">
+                    <div class="offer-wave-backdrop"></div>
+                    <div class="offer-content">
+                        <div class="offer-badge">
+                            <i class="ri-sparkles-fill"></i> Special Offer
+                        </div>
+                        <h2 class="offer-title">Enhance Your Music<br>Experience</h2>
+
+                        <div class="countdown-timer">
+                            <div class="timer-box">
+                                <span class="timer-num" id="timerDays">16</span>
+                                <span class="timer-label">Days</span>
+                            </div>
+                            <div class="timer-box">
+                                <span class="timer-num" id="timerHours">10</span>
+                                <span class="timer-label">Hours</span>
+                            </div>
+                            <div class="timer-box">
+                                <span class="timer-num" id="timerMins">56</span>
+                                <span class="timer-label">Mins</span>
+                            </div>
+                            <div class="timer-box">
+                                <span class="timer-num" id="timerSecs">54</span>
+                                <span class="timer-label">Secs</span>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-purple" id="offerBtn">
+                            Check it Out <i class="ri-arrow-right-line"></i>
+                        </button>
+                    </div>
+
+                    <div class="offer-graphic">
+                        <div class="purple-circle-glow"></div>
+                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80"
+                            alt="White Wireless Headphones" class="offer-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Features Section ("Kenapa Memilih Re-Loop?") -->
+        <section class="features-section" id="fitur">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Kenapa Memilih <span class="text-orange-glow">Re-Loop</span>?</h2>
+                    <p class="section-subtitle">Fitur cerdas kami membantu Anda membuat keputusan belanja cerdas.</p>
+                </div>
+
+                <div class="features-grid" style="display: flex; justify-content: center; gap: 24px; flex-wrap: wrap;">
+                    <!-- Feature Card 1: Riwayat Harga Cerdas -->
+                    <div class="feature-card-oxinix" style="flex: 0 1 calc(33.333% - 16px); max-width: 380px;">
+                        <div class="card-text-wrapper">
+                            <h3 class="feature-card-title">
+                                <i class="ri-history-line" style="color: #F2542D; margin-right: 8px;"></i>
+                                Riwayat Harga Cerdas
+                            </h3>
+                            <p class="feature-card-desc">
+                                Pantau naik-turunnya harga dan temukan waktu terbaik buat checkout.</p>
+                        </div>
+                    </div>
+
+                    <!-- Feature Card 2: Review Intelligence -->
+                    <div class="feature-card-oxinix" style="flex: 0 1 calc(33.333% - 16px); max-width: 380px;">
+                        <div class="card-text-wrapper">
+                            <h3 class="feature-card-title">
+                                <i class="ri-sparkles-fill" style="color: #10B981; margin-right: 8px;"></i>
+                                Review Intelligence
+                            </h3>
+                            <p class="feature-card-desc">
+                                Nggak perlu baca ratusan review. AI rangkum yang penting buat kamu!
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Feature Card 3: AI Recommendations -->
+                    <div class="feature-card-oxinix" style="flex: 0 1 calc(33.333% - 16px); max-width: 380px;">
+                        <div class="card-text-wrapper">
+                            <h3 class="feature-card-title">
+                                <i class="ri-shield-check-fill" style="color: #3B82F6; margin-right: 8px;"></i>
+                                AI Recommendations
+                            </h3>
+                            <p class="feature-card-desc">
+                                Cari produk yang paling cocok berdasarkan kebutuhan dan budget kamu.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 10 Produk Terlaris Minggu Ini Section -->
+        <section class="top-products-section" id="produk-terlaris">
+            <div class="container">
+                <div class="top-products-header">
+                    <h2 class="top-products-title">10 Produk Terlaris Minggu Ini</h2>
+                    <a href="#hanya-untukmu" class="top-products-view-all">
+                        Lihat Semua <i class="ri-arrow-right-s-line"></i>
+                    </a>
+                </div>
+
+                <!-- Product Slider Track -->
+                <div class="top-products-slider-wrapper">
+                    <button class="top-slider-arrow prev" id="topSliderPrev" aria-label="Previous Product">
+                        <i class="ri-arrow-left-s-line"></i>
+                    </button>
+
+                    <div class="top-products-track" id="topProductsTrack">
+                        <!-- Card 1 -->
+                        <div class="top-product-card" data-index="0" data-id="p_samsunggalaxys24ultra">
+                            <div class="top-card-image-wrapper">
+                                <img src="https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?auto=format&fit=crop&w=600&q=80"
+                                    alt="Samsung Galaxy S24 Ultra" class="top-card-img" loading="lazy">
+
+                            </div>
+                            <div class="top-card-content">
+                                <h3 class="top-card-name" title="Samsung Galaxy S24 Ultra">Samsung Galaxy S24 Ultra</h3>
+                                <div class="top-card-price-row">
+                                    <span class="top-card-price">Rp 21.999.000</span>
+                                    <span class="top-card-discount">5% Off</span>
+                                </div>
+                                <div class="top-card-rating-row">
+                                    <div class="top-card-stars">
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-line"></i>
+                                        <span class="rating-score">4.8</span>
+                                    </div>
+                                    <span class="top-card-reviews">120 reviews</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="top-product-card" data-index="1" data-id="p_nikeairmax97">
+                            <div class="top-card-image-wrapper">
+                                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80"
+                                    alt="Nike Air Max 97" class="top-card-img" loading="lazy">
+
+                            </div>
+                            <div class="top-card-content">
+                                <div class="top-card-title-row">
+                                    <h3 class="top-card-name" title="Nike Air Max 97">Nike Air Max 97</h3>
+                                    <span class="dropship-pill"><span class="dot"></span> Dropship</span>
+                                </div>
+                                <div class="top-card-price-row">
+                                    <span class="top-card-price">Rp 2.450.000</span>
+                                    <span class="top-card-discount">50% Off</span>
+                                </div>
+                                <div class="top-card-rating-row">
+                                    <div class="top-card-stars">
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-line"></i>
+                                        <span class="rating-score">4.8</span>
+                                    </div>
+                                    <span class="top-card-reviews">120 reviews</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="top-product-card" data-index="2" data-id="p_sonyplaystation5">
+                            <div class="top-card-image-wrapper">
+                                <img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db?auto=format&fit=crop&w=600&q=80"
+                                    alt="Sony PlayStation 5" class="top-card-img" loading="lazy">
+
+                            </div>
+                            <div class="top-card-content">
+                                <h3 class="top-card-name" title="Sony PlayStation 5">Sony PlayStation 5</h3>
+                                <div class="top-card-price-row">
+                                    <span class="top-card-price">Rp 8.999.000</span>
+                                    <span class="top-card-discount">5% Off</span>
+                                </div>
+                                <div class="top-card-rating-row">
+                                    <div class="top-card-stars">
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-line"></i>
+                                        <span class="rating-score">4.8</span>
+                                    </div>
+                                    <span class="top-card-reviews">120 reviews</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="top-product-card" data-index="3" data-id="p_applemacbookprom3">
+                            <div class="top-card-image-wrapper">
+                                <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=600&q=80"
+                                    alt="Apple MacBook Pro M3" class="top-card-img" loading="lazy">
+                            </div>
+                            <div class="top-card-content">
+                                <div class="top-card-title-row">
+                                    <h3 class="top-card-name" title="Apple MacBook Pro M3">Apple MacBook Pro M3</h3>
+                                    <span class="dropship-pill official-pill"><span class="dot"></span> Official</span>
+                                </div>
+                                <div class="top-card-price-row">
+                                    <span class="top-card-price">Rp 28.500.000</span>
+                                    <span class="top-card-discount">12% Off</span>
+                                </div>
+                                <div class="top-card-rating-row">
+                                    <div class="top-card-stars">
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <span class="rating-score">4.9</span>
+                                    </div>
+                                    <span class="top-card-reviews">350 reviews</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 5 -->
+                        <div class="top-product-card" data-index="4" data-id="p_dysonv15detect">
+                            <div class="top-card-image-wrapper">
+                                <img src="https://images.unsplash.com/photo-1558317374-067fb5f30001?auto=format&fit=crop&w=600&q=80"
+                                    alt="Dyson V15 Detect" class="top-card-img" loading="lazy">
+                            </div>
+                            <div class="top-card-content">
+                                <div class="top-card-title-row">
+                                    <h3 class="top-card-name" title="Dyson V15 Detect">Dyson V15 Detect</h3>
+                                    <span class="dropship-pill"><span class="dot"></span> Dropship</span>
+                                </div>
+                                <div class="top-card-price-row">
+                                    <span class="top-card-price">Rp 14.500.000</span>
+                                    <span class="top-card-discount">30% Off</span>
+                                </div>
+                                <div class="top-card-rating-row">
+                                    <div class="top-card-stars">
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-line"></i>
+                                        <span class="rating-score">4.8</span>
+                                    </div>
+                                    <span class="top-card-reviews">210 reviews</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 6 -->
+                        <div class="top-product-card" data-index="5" data-id="p_djimini4pro">
+                            <div class="top-card-image-wrapper">
+                                <img src="https://images.unsplash.com/photo-1579829366248-204fe8413f31?auto=format&fit=crop&w=600&q=80"
+                                    alt="DJI Mini 4 Pro" class="top-card-img" loading="lazy">
+                            </div>
+                            <div class="top-card-content">
+                                <h3 class="top-card-name" title="DJI Mini 4 Pro">DJI Mini 4 Pro</h3>
+                                <div class="top-card-price-row">
+                                    <span class="top-card-price">Rp 12.300.000</span>
+                                    <span class="top-card-discount">25% Off</span>
+                                </div>
+                                <div class="top-card-rating-row">
+                                    <div class="top-card-stars">
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-half-fill"></i>
+                                        <span class="rating-score">4.7</span>
+                                    </div>
+                                    <span class="top-card-reviews">95 reviews</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 7 -->
+                        <div class="top-product-card" data-index="6" data-id="p_logitechgprox">
+                            <div class="top-card-image-wrapper">
+                                <img src="https://images.unsplash.com/photo-1595225476474-87563907a212?auto=format&fit=crop&w=600&q=80"
+                                    alt="Logitech G Pro X" class="top-card-img" loading="lazy">
+                            </div>
+                            <div class="top-card-content">
+                                <div class="top-card-title-row">
+                                    <h3 class="top-card-name" title="Logitech G Pro X">Logitech G Pro X</h3>
+                                    <span class="dropship-pill"><span class="dot"></span> Dropship</span>
+                                </div>
+                                <div class="top-card-price-row">
+                                    <span class="top-card-price">Rp 2.150.000</span>
+                                    <span class="top-card-discount">15% Off</span>
+                                </div>
+                                <div class="top-card-rating-row">
+                                    <div class="top-card-stars">
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-line"></i>
+                                        <span class="rating-score">4.8</span>
+                                    </div>
+                                    <span class="top-card-reviews">430 reviews</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 8 -->
+                        <div class="top-product-card" data-index="7" data-id="p_kindlepaperwhite">
+                            <div class="top-card-image-wrapper">
+                                <img src="https://images.unsplash.com/photo-1592496001020-d31bd830651f?auto=format&fit=crop&w=600&q=80"
+                                    alt="Kindle Paperwhite" class="top-card-img" loading="lazy">
+                            </div>
+                            <div class="top-card-content">
+                                <h3 class="top-card-name" title="Kindle Paperwhite">Kindle Paperwhite</h3>
+                                <div class="top-card-price-row">
+                                    <span class="top-card-price">Rp 2.750.000</span>
+                                    <span class="top-card-discount">10% Off</span>
+                                </div>
+                                <div class="top-card-rating-row">
+                                    <div class="top-card-stars">
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <span class="rating-score">4.9</span>
+                                    </div>
+                                    <span class="top-card-reviews">180 reviews</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 9 -->
+                        <div class="top-product-card" data-index="8" data-id="p_boseqcultra">
+                            <div class="top-card-image-wrapper">
+                                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80"
+                                    alt="Bose QC Ultra" class="top-card-img" loading="lazy">
+                            </div>
+                            <div class="top-card-content">
+                                <div class="top-card-title-row">
+                                    <h3 class="top-card-name" title="Bose QC Ultra">Bose QC Ultra</h3>
+                                    <span class="dropship-pill"><span class="dot"></span> Dropship</span>
+                                </div>
+                                <div class="top-card-price-row">
+                                    <span class="top-card-price">Rp 5.999.000</span>
+                                    <span class="top-card-discount">40% Off</span>
+                                </div>
+                                <div class="top-card-rating-row">
+                                    <div class="top-card-stars">
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-line"></i>
+                                        <span class="rating-score">4.8</span>
+                                    </div>
+                                    <span class="top-card-reviews">512 reviews</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 10 -->
+                        <div class="top-product-card" data-index="9" data-id="p_nintendoswitcholed">
+                            <div class="top-card-image-wrapper">
+                                <img src="https://images.unsplash.com/photo-1612444530582-fc66183b16f7?auto=format&fit=crop&w=600&q=80"
+                                    alt="Nintendo Switch OLED" class="top-card-img" loading="lazy">
+                            </div>
+                            <div class="top-card-content">
+                                <h3 class="top-card-name" title="Nintendo Switch OLED">Nintendo Switch OLED</h3>
+                                <div class="top-card-price-row">
+                                    <span class="top-card-price">Rp 4.850.000</span>
+                                    <span class="top-card-discount">35% Off</span>
+                                </div>
+                                <div class="top-card-rating-row">
+                                    <div class="top-card-stars">
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-line"></i>
+                                        <span class="rating-score">4.8</span>
+                                    </div>
+                                    <span class="top-card-reviews">280 reviews</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="top-slider-arrow next" id="topSliderNext" aria-label="Next Product">
+                        <i class="ri-arrow-right-s-line"></i>
+                    </button>
+                </div>
+
+                <!-- Interactive Segmented Dash Slider / Pagination -->
+                <div class="top-slider-pagination-wrapper">
+                    <div class="top-slider-pagination" id="topSliderPagination" role="tablist"
+                        aria-label="Slider Navigasi Produk Terlaris">
+                        <button class="dash-item active" data-index="0" role="tab" aria-selected="true"
+                            aria-label="Produk 1"></button>
+                        <button class="dash-item" data-index="1" role="tab" aria-selected="false"
+                            aria-label="Produk 2"></button>
+                        <button class="dash-item" data-index="2" role="tab" aria-selected="false"
+                            aria-label="Produk 3"></button>
+                        <button class="dash-item" data-index="3" role="tab" aria-selected="false"
+                            aria-label="Produk 4"></button>
+                        <button class="dash-item" data-index="4" role="tab" aria-selected="false"
+                            aria-label="Produk 5"></button>
+                        <button class="dash-item" data-index="5" role="tab" aria-selected="false"
+                            aria-label="Produk 6"></button>
+                        <button class="dash-item" data-index="6" role="tab" aria-selected="false"
+                            aria-label="Produk 7"></button>
+                        <button class="dash-item" data-index="7" role="tab" aria-selected="false"
+                            aria-label="Produk 8"></button>
+                        <button class="dash-item" data-index="8" role="tab" aria-selected="false"
+                            aria-label="Produk 9"></button>
+                        <button class="dash-item" data-index="9" role="tab" aria-selected="false"
+                            aria-label="Produk 10"></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Products Showcase Section ("Hanya Untukmu / Explore Our Best Sellers") -->
+        <section class="products-section" id="hanya-untukmu">
+            <div class="container">
+                <div class="products-bestseller-header">
+                    <div class="bestseller-header-left">
+                        <span class="purple-sub-badge"><i class="ri-sparkles-fill"></i> Just For You</span>
+                        <h2 class="section-title">Recommendations For You</h2>
+                    </div>
+                    <div class="bestseller-header-right">
+                        <a href="pages/shop.html" class="btn-outline-pill">
+                            View All Products <i class="ri-arrow-right-line"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 4 Columns x 2 Rows Product Grid -->
+                <div class="bestseller-grid" id="productsGrid">
+                    <!-- Card 1 -->
+                    <div class="top-product-card" data-index="0" data-id="p_huaweifreebuds7i"
+                        onclick="window.location.href='product-detail.html'">
+                        <div class="top-card-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1606220838315-056192d5e927?auto=format&fit=crop&w=600&q=80"
+                                alt="HUAWEI FreeBuds 7i" class="top-card-img" loading="lazy">
+                        </div>
+                        <div class="top-card-content">
+                            <div class="top-card-title-row">
+                                <h3 class="top-card-name" title="HUAWEI FreeBuds 7i">HUAWEI FreeBuds 7i</h3>
+                                <span class="dropship-pill"><span class="dot"></span> Dropship</span>
+                            </div>
+                            <div class="top-card-price-row">
+                                <span class="top-card-price">Rp 979.000</span>
+                                <span class="top-card-discount">5% Off</span>
+                            </div>
+                            <div class="top-card-rating-row">
+                                <div class="top-card-stars">
+                                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
+                                        class="ri-star-fill"></i><i class="ri-star-fill"></i><i
+                                        class="ri-star-line"></i>
+                                    <span class="rating-score">4.8</span>
+                                </div>
+                                <span class="top-card-reviews">120 reviews</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="top-product-card" data-index="1" data-id="p_adidassl72og"
+                        onclick="window.location.href='product-detail.html'">
+                        <div class="top-card-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80"
+                                alt="Adidas SL72 OG" class="top-card-img" loading="lazy">
+                        </div>
+                        <div class="top-card-content">
+                            <div class="top-card-title-row">
+                                <h3 class="top-card-name" title="Adidas SL72 OG">Adidas SL72 OG</h3>
+                                <span class="dropship-pill"><span class="dot"></span> Dropship</span>
+                            </div>
+                            <div class="top-card-price-row">
+                                <span class="top-card-price">Rp 1.600.000</span>
+                                <span class="top-card-discount">5% Off</span>
+                            </div>
+                            <div class="top-card-rating-row">
+                                <div class="top-card-stars">
+                                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
+                                        class="ri-star-fill"></i><i class="ri-star-fill"></i><i
+                                        class="ri-star-line"></i>
+                                    <span class="rating-score">4.8</span>
+                                </div>
+                                <span class="top-card-reviews">120 reviews</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="top-product-card" data-index="2" data-id="p_jbltune500"
+                        onclick="window.location.href='product-detail.html'">
+                        <div class="top-card-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80"
+                                alt="JBL Tune 500" class="top-card-img" loading="lazy">
+                        </div>
+                        <div class="top-card-content">
+                            <div class="top-card-title-row">
+                                <h3 class="top-card-name" title="JBL Tune 500">JBL Tune 500</h3>
+                                <span class="dropship-pill"><span class="dot"></span> Dropship</span>
+                            </div>
+                            <div class="top-card-price-row">
+                                <span class="top-card-price">Rp 599.000</span>
+                                <span class="top-card-discount">3% Off</span>
+                            </div>
+                            <div class="top-card-rating-row">
+                                <div class="top-card-stars">
+                                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
+                                        class="ri-star-fill"></i><i class="ri-star-fill"></i><i
+                                        class="ri-star-line"></i>
+                                    <span class="rating-score">4.8</span>
+                                </div>
+                                <span class="top-card-reviews">120 reviews</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="top-product-card" data-index="3" data-id="p_cheeklitblushstick"
+                        onclick="window.location.href='product-detail.html'">
+                        <div class="top-card-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=600&q=80"
+                                alt="Cheek Lit Blush Stick" class="top-card-img" loading="lazy">
+                        </div>
+                        <div class="top-card-content">
+                            <div class="top-card-title-row">
+                                <h3 class="top-card-name" title="Cheek Lit Blush Stick">Cheek Lit Blush Stick</h3>
+                                <span class="dropship-pill"><span class="dot"></span> Dropship</span>
+                            </div>
+                            <div class="top-card-price-row">
+                                <span class="top-card-price">Rp 60.000</span>
+                                <span class="top-card-discount">5% Off</span>
+                            </div>
+                            <div class="top-card-rating-row">
+                                <div class="top-card-stars">
+                                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
+                                        class="ri-star-fill"></i><i class="ri-star-fill"></i><i
+                                        class="ri-star-line"></i>
+                                    <span class="rating-score">4.8</span>
+                                </div>
+                                <span class="top-card-reviews">120 reviews</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="top-product-card" data-index="4" data-id="p_tshirtsoft"
+                        onclick="window.location.href='product-detail.html'">
+                        <div class="top-card-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&q=80"
+                                alt="T-Shirt Soft" class="top-card-img" loading="lazy">
+                        </div>
+                        <div class="top-card-content">
+                            <div class="top-card-title-row">
+                                <h3 class="top-card-name" title="T-Shirt Soft">T-Shirt Soft</h3>
+                                <span class="dropship-pill" style="background: #e8fdf2; color: #0e9f6e;"><span
+                                        class="dot" style="background: #0e9f6e;"></span> Affiliate</span>
+                            </div>
+                            <div class="top-card-price-row">
+                                <span class="top-card-price">Rp 68.499</span>
+                                <span class="top-card-discount">8% Off</span>
+                            </div>
+                            <div class="top-card-rating-row">
+                                <div class="top-card-stars">
+                                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
+                                        class="ri-star-fill"></i><i class="ri-star-fill"></i><i
+                                        class="ri-star-line"></i>
+                                    <span class="rating-score">4.8</span>
+                                </div>
+                                <span class="top-card-reviews">120 reviews</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="top-product-card" data-index="5" data-id="p_kidsairismkatun"
+                        onclick="window.location.href='product-detail.html'">
+                        <div class="top-card-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&w=600&q=80"
+                                alt="KIDS AIRism Katun" class="top-card-img" loading="lazy">
+                        </div>
+                        <div class="top-card-content">
+                            <div class="top-card-title-row">
+                                <h3 class="top-card-name" title="KIDS AIRism Katun">KIDS AIRism Katun</h3>
+                                <span class="dropship-pill" style="background: #e8fdf2; color: #0e9f6e;"><span
+                                        class="dot" style="background: #0e9f6e;"></span> Affiliate</span>
+                            </div>
+                            <div class="top-card-price-row">
+                                <span class="top-card-price">Rp 40.990</span>
+                                <span class="top-card-discount">3% Off</span>
+                            </div>
+                            <div class="top-card-rating-row">
+                                <div class="top-card-stars">
+                                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
+                                        class="ri-star-fill"></i><i class="ri-star-fill"></i><i
+                                        class="ri-star-line"></i>
+                                    <span class="rating-score">4.8</span>
+                                </div>
+                                <span class="top-card-reviews">120 reviews</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 7 -->
+                    <div class="top-product-card" data-index="6" data-id="p_smartwatchultragen4"
+                        onclick="window.location.href='product-detail.html'">
+                        <div class="top-card-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80"
+                                alt="Smartwatch Ultra Gen-4" class="top-card-img" loading="lazy">
+                        </div>
+                        <div class="top-card-content">
+                            <div class="top-card-title-row">
+                                <h3 class="top-card-name" title="Smartwatch Ultra Gen-4">Smartwatch Ultra Gen-4</h3>
+                                <span class="dropship-pill"><span class="dot"></span> Dropship</span>
+                            </div>
+                            <div class="top-card-price-row">
+                                <span class="top-card-price">Rp 899.000</span>
+                                <span class="top-card-discount">10% Off</span>
+                            </div>
+                            <div class="top-card-rating-row">
+                                <div class="top-card-stars">
+                                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
+                                        class="ri-star-fill"></i><i class="ri-star-fill"></i><i
+                                        class="ri-star-line"></i>
+                                    <span class="rating-score">4.8</span>
+                                </div>
+                                <span class="top-card-reviews">120 reviews</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 8 -->
+                    <div class="top-product-card" data-index="7" data-id="p_rgbwirelesskeyboard"
+                        onclick="window.location.href='product-detail.html'">
+                        <div class="top-card-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=600&q=80"
+                                alt="RGB Wireless Keyboard" class="top-card-img" loading="lazy">
+                        </div>
+                        <div class="top-card-content">
+                            <div class="top-card-title-row">
+                                <h3 class="top-card-name" title="RGB Wireless Keyboard">RGB Wireless Keyboard</h3>
+                                <span class="dropship-pill"><span class="dot"></span> Dropship</span>
+                            </div>
+                            <div class="top-card-price-row">
+                                <span class="top-card-price">Rp 350.000</span>
+                                <span class="top-card-discount">5% Off</span>
+                            </div>
+                            <div class="top-card-rating-row">
+                                <div class="top-card-stars">
+                                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
+                                        class="ri-star-fill"></i><i class="ri-star-fill"></i><i
+                                        class="ri-star-line"></i>
+                                    <span class="rating-score">4.8</span>
+                                </div>
+                                <span class="top-card-reviews">120 reviews</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Featured Campaign Banner -->
+        <section class="campaign-banner" id="campaign">
+            <div class="container campaign-container">
+                <div class="campaign-left">
+                    <div class="banner-logo-wrapper">
+                        <img src="assets/logo.png" alt="home">
+                    </div>
+                </div>
+                <div class="campaign-right">
+                    <span class="campaign-tag">SPRING / SUMMER COLLECTION</span>
+                    <h2 class="campaign-title">RE - LOOP !</h2>
+                    <p class="campaign-desc">
+                        Discover our meticulously curated collection of sustainable fashion pieces, designed to shine
+                        with you through every season.
+                    </p>
+                    <button class="btn btn-outline" id="viewCampaignBtn"
+                        onclick="window.open('https://instagram.com/re_loop.id', '_blank')">
+                        View Campaign
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="container footer-container">
+            <div class="footer-col brand-col">
+                <a href="#" class="footer-logo">
+                    <div class="logo-icon footer-logo-icon">
+                        <svg viewBox="0 0 240 240" class="reloop-svg-official">
+                            <path d="M 20 15 L 60 15 L 60 180 L 20 220 Z" fill="url(#reloopGrad1_nav)" />
+                            <path
+                                d="M 60 15 L 125 15 C 165 15 175 60 150 90 C 130 115 90 120 70 120 L 95 95 L 45 125 L 95 155 L 70 130 C 110 130 185 120 195 65 C 205 10 125 15 125 15 Z"
+                                fill="url(#reloopGrad1_nav)" />
+                            <path
+                                d="M 160 100 L 160 170 C 160 195 175 205 195 205 L 210 205 L 195 185 L 235 212 L 195 240 L 210 220 L 190 220 C 150 220 142 195 142 165 L 142 100 Z"
+                                fill="url(#reloopGrad2_nav)" />
+                        </svg>
+                    </div>
+                    <span class="brand-title">RE - LOOP</span>
+                </a>
+                <p class="footer-about">
+                    Bandingkan harga & review produk terbaik dari berbagai marketplace Indonesia dalam satu platform
+                    pintar.
+                </p>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+                    <a href="#" aria-label="Twitter/X"><i class="ri-twitter-x-line"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="ri-youtube-line"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-heading">SHOP</h4>
+                <ul class="footer-links">
+                    <li><a href="#">All Products</a></li>
+                    <li><a href="#">Designer Choices</a></li>
+                    <li><a href="#">Featured Items</a></li>
+                    <li><a href="#">Outlet Sales</a></li>
+                    <li><a href="#">Gift Card</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-heading">SUPPORT</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Returns & Exchanges</a></li>
+                    <li><a href="#">Safety and Security</a></li>
+                    <li><a href="#">Quick FAQs</a></li>
+                    <li><a href="#">Contact Support</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-heading">OUR STORY</h4>
+                <ul class="footer-links">
+                    <li><a href="#">The Brand</a></li>
+                    <li><a href="#">Eco-conscious Guarantee</a></li>
+                    <li><a href="#">Stores & Partnership</a></li>
+                    <li><a href="#">The Courier</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container footer-bottom-container">
+                <p>&copy; 2026 RE-LOOP Marketplace. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookies Setting</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Price Comparison Modal Overlay -->
+    <div class="modal-overlay" id="compareModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalCloseBtn">&times;</button>
+            <div class="modal-header">
+                <span class="modal-badge"><i class="ri-scales-3-line"></i> Real-Time Price Comparison</span>
+                <h3 id="modalProductTitle" class="modal-title">Apple iPhone 13 Pro 128GB</h3>
+            </div>
+            <div class="modal-body">
+                <div class="store-comparison-list" id="storeList">
+                    <!-- Dynamic store items will be injected by JS -->
+                </div>
+            </div>
+        </div>
+        <!-- User Profile Settings Modal Overlay (Matching Reference Image) -->
+        <div class="modal-overlay profile-modal-overlay" id="profileModal">
+            <div class="profile-dashboard-card">
+                <!-- Sidebar (Left) -->
+                <aside class="profile-sidebar">
+                    <button class="profile-back-btn" id="profileBackBtn">
+                        <i class="ri-arrow-left-s-line"></i> Back
+                    </button>
+
+                    <nav class="profile-menu">
+                        <!-- Expandable Group: General -->
+                        <div class="menu-group">
+                            <div class="menu-group-header">
+                                <span><i class="ri-settings-4-line"></i> General</span>
+                                <i class="ri-arrow-down-s-line"></i>
+                            </div>
+                            <ul class="menu-sub-items">
+                                <li><a href="#profileModal" class="profile-tab-link active" data-tab="account"><i
+                                            class="ri-user-line"></i> Account</a></li>
+                                <li><a href="#profileModal" class="profile-tab-link" data-tab="password"><i
+                                            class="ri-key-2-line"></i> Password</a></li>
+                                <li><a href="#profileModal" class="profile-tab-link" data-tab="connected"><i
+                                            class="ri-links-line"></i> Connected accounts</a></li>
+                                <li><a href="#profileModal" class="profile-tab-link" data-tab="sessions"><i
+                                            class="ri-macbook-line"></i> Sessions</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Single Menu Items -->
+                        <a href="#profileModal" class="menu-single-item profile-tab-link" data-tab="billing">
+                            <i class="ri-bank-card-line"></i> Billing
+                        </a>
+                        <a href="#profileModal" class="menu-single-item profile-tab-link" data-tab="credits">
+                            <i class="ri-gift-line"></i> Credits
+                        </a>
+                        <a href="#profileModal" class="menu-single-item profile-tab-link" data-tab="integrations">
+                            <i class="ri-apps-2-line"></i> Integrations
+                        </a>
+                        <a href="#profileModal" class="menu-single-item profile-tab-link" data-tab="appearance">
+                            <i class="ri-palette-line"></i> Appearance
+                        </a>
+                        <a href="#profileModal" class="menu-single-item profile-tab-link" data-tab="notifications">
+                            <i class="ri-notification-3-line"></i> Notifications
+                        </a>
+                        <a href="#profileModal" class="menu-single-item profile-tab-link" data-tab="archives">
+                            <i class="ri-archive-line"></i> Archives
+                        </a>
+                    </nav>
+                </aside>
+
+                <!-- Main Content Area (Right) -->
+                <main class="profile-main-content">
+                    <!-- Top Header Bar inside Dashboard -->
+                    <header class="profile-content-header">
+                        <div class="breadcrumb-trail">
+                            <span>Home</span> <i class="ri-arrow-right-s-line"></i>
+                            <span>Settings</span> <i class="ri-arrow-right-s-line"></i>
+                            <span class="current-crumb" id="currentTabBreadcrumb">Account</span>
+                        </div>
+                        <div class="header-right-actions">
+                            <button class="icon-circle-btn" title="Notifications">
+                                <i class="ri-notification-3-line"></i>
+                            </button>
+                            <div class="avatar-small-header">
+                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80"
+                                    alt="User Avatar">
+                            </div>
+                        </div>
+                    </header>
+
+                    <!-- Dynamic Tab Pane: Account -->
+                    <div class="tab-pane active" id="tab-account">
+                        <h2 class="profile-page-title">Account</h2>
+
+                        <!-- Avatar Edit Section -->
+                        <div class="avatar-edit-wrapper">
+                            <div class="profile-avatar-box">
+                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80"
+                                    alt="Christopher Davis" id="userAvatarImg">
+                            </div>
+                            <button class="btn-edit-avatar" id="editAvatarBtn">Edit</button>
+                        </div>
+
+                        <!-- Form Inputs Grid -->
+                        <form class="profile-form-grid" id="accountSettingsForm">
+                            <div class="form-group">
+                                <label class="form-label">Username</label>
+                                <input type="text" class="form-input" value="ChristDavis" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Full name</label>
+                                <input type="text" class="form-input" value="Christopher Davis" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Email</label>
+                                <input type="email" class="form-input" value="christopdev@gmail.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Time zone</label>
+                                <div class="select-wrapper">
+                                    <select class="form-select">
+                                        <option selected>Europe/Rome (GMT +02:00)</option>
+                                        <option>Asia/Jakarta (GMT +07:00)</option>
+                                        <option>America/New_York (GMT -04:00)</option>
+                                        <option>Asia/Tokyo (GMT +09:00)</option>
+                                    </select>
+                                    <i class="ri-arrow-down-s-line select-arrow"></i>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Time format</label>
+                                <div class="select-wrapper">
+                                    <select class="form-select">
+                                        <option selected>Browser default</option>
+                                        <option>12-hour (1:00 PM)</option>
+                                        <option>24-hour (13:00)</option>
+                                    </select>
+                                    <i class="ri-arrow-down-s-line select-arrow"></i>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Start of the week</label>
+                                <div class="select-wrapper">
+                                    <select class="form-select">
+                                        <option selected>Sunady (Browser default)</option>
+                                        <option>Monday</option>
+                                    </select>
+                                    <i class="ri-arrow-down-s-line select-arrow"></i>
+                                </div>
+                            </div>
+                            <div class="form-group full-width">
+                                <label class="form-label">Language</label>
+                                <div class="select-wrapper">
+                                    <select class="form-select">
+                                        <option selected>Browser default</option>
+                                        <option>Bahasa Indonesia</option>
+                                        <option>English (US)</option>
+                                    </select>
+                                    <i class="ri-arrow-down-s-line select-arrow"></i>
+                                </div>
+                            </div>
+
+                            <div class="form-actions full-width">
+                                <button type="submit" class="btn-dark-update" id="updateProfileBtn">Update</button>
+                            </div>
+                        </form>
+                    </div>
+                </main>
+            </div>
+        </div>
+
+        <!-- Main Script -->
+        <script src="js/script.js"></script>
+</body>
+
+</html>
+

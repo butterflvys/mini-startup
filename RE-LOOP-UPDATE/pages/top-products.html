@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10 Produk Terlaris | RE-LOOP</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="../index.html" class="logo">
+                <div class="logo-icon"><img src="../assets/logo.png" alt="RE-LOOP Logo"></div>
+                <div class="logo-text"><span class="brand-title">RE - LOOP</span></div>
+            </a>
+                        <nav class="nav-menu" id="navMenu">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="shop.html" class="nav-link" id="shopNavLink">Shop</a>
+                <div class="nav-dropdown">
+                    <a href="category.html" class="nav-link">Categories</a>
+                </div>
+                <a href="top-products.html" class="nav-link nav-ai-link">
+                    <i class="ri-sparkles-fill ai-sparkle-icon"></i> AI Rekomendasi
+                </a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            <div class="nav-search-wrapper">
+                <input type="text" id="quickSearchInput" placeholder="Search products...">
+                <button class="nav-search-btn" id="quickSearchBtn" title="Search"><i class="ri-search-line"></i></button>
+            </div>
+            <div class="nav-actions">
+                <button class="action-icon-btn" id="cartBtn" title="Shopping Cart">
+                    <i class="ri-shopping-cart-2-line"></i>
+                    <span class="cart-count">0</span>
+                </button>
+                <div class="notif-btn-wrapper">
+                    <button class="action-icon-btn" title="Notifications"><i class="ri-notification-3-line"></i></button>
+                </div>
+                <a href="login.html" class="action-icon-btn" id="userProfileBtn" title="Login to Account">
+                    <i class="ri-user-3-line"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main style="padding: 40px 0 80px; background-color: #F8FAFC; min-height: calc(100vh - 80px);">
+    <div class="container">
+        <!-- AI Header Section -->
+        <div class="ai-header">
+            <div class="ai-icon-wrapper">
+                <i class="ri-robot-2-fill"></i>
+            </div>
+            <h1 class="ai-title">RE-LOOP AI Assistant</h1>
+            <p class="ai-subtitle">Beritahu saya apa yang Anda cari, dan saya akan memberikan rekomendasi terbaik untuk Anda.</p>
+            
+            <div class="ai-search-box">
+                <input type="text" id="aiSearchInput" placeholder="Contoh: 'Sepatu' atau 'Gadget murah'">
+                <button id="aiSearchBtn"><i class="ri-send-plane-fill"></i></button>
+            </div>
+
+            <div class="ai-quick-prompts">
+                <span class="ai-prompt-chip">Rekomendasi Fashion</span>
+                <span class="ai-prompt-chip">Gadget Terbaik</span>
+                <span class="ai-prompt-chip">Skincare Rutin</span>
+                <span class="ai-prompt-chip">Sepatu Olahraga</span>
+            </div>
+        </div>
+
+        <!-- Loading Indicator -->
+        <div id="aiLoadingIndicator" class="ai-loading" style="display: none;">
+            <div class="spinner"></div>
+            <p>AI sedang menganalisis database produk untuk Anda...</p>
+        </div>
+
+        <!-- Results Section -->
+        <div id="aiResultsSection" style="display: none;">
+            <div class="ai-results-header">
+                <h2 id="aiResultsTitle">Rekomendasi Terbaik</h2>
+                <span id="aiResultsCount" class="badge-ai-count">Ditemukan 0 produk</span>
+            </div>
+            <div class="shop-grid" id="aiRecommendationGrid">
+                <!-- Products will be injected here via JS -->
+            </div>
+        </div>
+        
+        <!-- Default Content if no search yet -->
+        <div id="aiDefaultSection">
+            <h2 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 24px; text-align: center;">10 Produk Terpopuler Pilihan AI Minggu Ini</h2>
+            <div class="shop-grid" id="defaultTopProductsGrid">
+                <!-- Preloaded top 10 products will be injected here via JS -->
+            </div>
+        </div>
+    </div>
+</main>
+    <footer class="footer" id="footer">
+        <div class="container footer-container">
+            <div class="footer-col brand-col">
+                <a href="#" class="footer-logo">
+                    <div class="logo-icon footer-logo-icon">
+                        <svg viewBox="0 0 240 240" class="reloop-svg-official">
+                            <path d="M 20 15 L 60 15 L 60 180 L 20 220 Z" fill="url(#reloopGrad1_nav)" />
+                            <path
+                                d="M 60 15 L 125 15 C 165 15 175 60 150 90 C 130 115 90 120 70 120 L 95 95 L 45 125 L 95 155 L 70 130 C 110 130 185 120 195 65 C 205 10 125 15 125 15 Z"
+                                fill="url(#reloopGrad1_nav)" />
+                            <path
+                                d="M 160 100 L 160 170 C 160 195 175 205 195 205 L 210 205 L 195 185 L 235 212 L 195 240 L 210 220 L 190 220 C 150 220 142 195 142 165 L 142 100 Z"
+                                fill="url(#reloopGrad2_nav)" />
+                        </svg>
+                    </div>
+                    <span class="brand-title">RE - LOOP</span>
+                </a>
+                <p class="footer-about">
+                    Bandingkan harga & review produk terbaik dari berbagai marketplace Indonesia dalam satu platform
+                    pintar.
+                </p>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+                    <a href="#" aria-label="Twitter/X"><i class="ri-twitter-x-line"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="ri-youtube-line"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-heading">SHOP</h4>
+                <ul class="footer-links">
+                    <li><a href="#">All Products</a></li>
+                    <li><a href="#">Designer Choices</a></li>
+                    <li><a href="#">Featured Items</a></li>
+                    <li><a href="#">Outlet Sales</a></li>
+                    <li><a href="#">Gift Card</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-heading">SUPPORT</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Returns & Exchanges</a></li>
+                    <li><a href="#">Safety and Security</a></li>
+                    <li><a href="#">Quick FAQs</a></li>
+                    <li><a href="#">Contact Support</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-heading">OUR STORY</h4>
+                <ul class="footer-links">
+                    <li><a href="#">The Brand</a></li>
+                    <li><a href="#">Eco-conscious Guarantee</a></li>
+                    <li><a href="#">Stores & Partnership</a></li>
+                    <li><a href="#">The Courier</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container footer-bottom-container">
+                <p>&copy; 2026 RE-LOOP Marketplace. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookies Setting</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/products.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (!window.reloopProducts) return;
+
+            const searchInput = document.getElementById('aiSearchInput');
+            const searchBtn = document.getElementById('aiSearchBtn');
+            const chips = document.querySelectorAll('.ai-prompt-chip');
+            const loadingIndicator = document.getElementById('aiLoadingIndicator');
+            const resultsSection = document.getElementById('aiResultsSection');
+            const defaultSection = document.getElementById('aiDefaultSection');
+            const resultsGrid = document.getElementById('aiRecommendationGrid');
+            const defaultGrid = document.getElementById('defaultTopProductsGrid');
+            const resultsCount = document.getElementById('aiResultsCount');
+            const resultsTitle = document.getElementById('aiResultsTitle');
+
+            // Render product card HTML
+            const renderProductCard = (p) => {
+                const discountHTML = p.discount ? `<div class="badge-cheaper">${p.discount}</div>` : '';
+                return `
+                <div class="shop-card" style="position: relative;">
+                    <a href="product-detail.html?id=${p.id}" class="shop-card-image-wrap" style="display: block;">
+                        <img src="${getAssetPath(p.image)}" alt="${p.name}">
+                        <div style="position: absolute; top: 12px; left: 12px; background: rgba(0,0,0,0.6); color: white; padding: 4px 8px; border-radius: 6px; font-size: 0.75rem; font-weight: bold; display: flex; align-items: center; gap: 4px; z-index: 5;">
+                            <i class="ri-robot-2-fill" style="color: #F2542D;"></i> Score: ${p.aiScore}
+                        </div>
+                    </a>
+                    <button class="top-card-fav-btn" style="position: absolute; top: 12px; right: 12px; background: white; border: none; border-radius: 50%; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 2px 5px rgba(0,0,0,0.1); z-index: 10;">
+                        <i class="ri-heart-line" style="font-size: 1.1rem; color: #666;"></i>
+                    </button>
+                    <a href="product-detail.html?id=${p.id}" class="shop-card-info" style="text-decoration: none; color: inherit;">
+                        <div class="shop-card-title-row">
+                            <h3 class="shop-card-title">${p.name}</h3>
+                        </div>
+                        <div class="shop-card-price-row">
+                            <div class="shop-card-price">${p.price}</div>
+                            ${discountHTML}
+                        </div>
+                        <div class="shop-card-rating-row">
+                            <div class="rating-stars">
+                                <i class="ri-star-fill"></i> <span>${p.rating}</span>
+                            </div>
+                            <span>${p.reviews} reviews</span>
+                        </div>
+                    </a>
+                </div>`;
+            };
+
+            // Setup favorite buttons
+            const setupFavBtns = () => {
+                document.querySelectorAll('.top-card-fav-btn').forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        e.preventDefault(); // Prevent navigating
+                        const icon = btn.querySelector('i');
+                        if (icon.classList.contains('ri-heart-line')) {
+                            icon.classList.remove('ri-heart-line');
+                            icon.classList.add('ri-heart-fill');
+                            icon.style.color = '#F2542D';
+                        } else {
+                            icon.classList.remove('ri-heart-fill');
+                            icon.classList.add('ri-heart-line');
+                            icon.style.color = '#666';
+                        }
+                    });
+                });
+            };
+
+            // Initial load
+            const topProducts = [...window.reloopProducts].sort((a, b) => b.aiScore - a.aiScore).slice(0, 10);
+            defaultGrid.innerHTML = topProducts.map(renderProductCard).join('');
+            setupFavBtns();
+
+            // Search
+            const performAISearch = (query) => {
+                if (!query.trim()) return;
+                searchInput.value = query;
+                defaultSection.style.display = 'none';
+                resultsSection.style.display = 'none';
+                loadingIndicator.style.display = 'flex';
+
+                setTimeout(() => {
+                    loadingIndicator.style.display = 'none';
+                    resultsSection.style.display = 'block';
+
+                    const q = query.toLowerCase();
+                    const words = q.split(' ').filter(k => k.length > 2);
+                    
+                    // Add synonyms
+                    let searchTerms = [...words];
+                    if (q.includes('gadget') || q.includes('hp')) searchTerms.push('iphone', 'samsung', 'phone', 'smartphone');
+                    if (q.includes('fashion') || q.includes('pakaian')) searchTerms.push('mens-fashion', 'womens-fashion', 'baju', 'celana');
+                    if (q.includes('skincare') || q.includes('rutin')) searchTerms.push('beauty', 'serum', 'moisturizer');
+                    if (q.includes('olahraga') || q.includes('sport')) searchTerms.push('lari', 'sepeda', 'sports');
+
+                    let scoredProducts = window.reloopProducts.map(p => {
+                        let score = 0;
+                        const pName = p.name.toLowerCase();
+                        const pCat = p.category.toLowerCase();
+                        const pDesc = p.description.toLowerCase();
+                        
+                        // Exact phrase matches give huge points
+                        if (pName.includes(q)) score += 50;
+                        if (pCat.includes(q)) score += 30;
+                        
+                        // Term matches
+                        searchTerms.forEach(term => {
+                            if (pName.includes(term)) score += 10; // Name match is very strong
+                            if (pCat.includes(term)) score += 5;   // Category match is medium
+                            if (pDesc.includes(term)) score += 2;  // Desc match is weak
+                            if (p.pros.some(pro => pro.toLowerCase().includes(term))) score += 1;
+                        });
+
+                        // Special strict filter: if they asked for 'sepatu', it MUST be a shoe
+                        if (q.includes('sepatu') && !pName.includes('sepatu') && !pName.includes('shoes') && !pCat.includes('shoes')) {
+                            score = 0; 
+                        }
+                        // Special strict filter: if they asked for 'gadget', penalize non-phones if they complain
+                        if (q.includes('gadget') && (pName.includes('mouse') || pName.includes('headphone') || pName.includes('earbuds') || pName.includes('sony'))) {
+                            score = 0;
+                        }
+
+                        return { product: p, score: score };
+                    });
+
+                    // Filter out 0 scores and sort by score
+                    let matched = scoredProducts.filter(item => item.score > 0)
+                                                .sort((a, b) => b.score - a.score)
+                                                .map(item => item.product);
+
+                    if (matched.length > 0) {
+                        resultsTitle.innerHTML = 'Rekomendasi untuk "<strong>' + query + '</strong>"';
+                        resultsCount.textContent = 'Ditemukan ' + matched.length + ' produk';
+                        resultsGrid.innerHTML = matched.map(renderProductCard).join('');
+                        setupFavBtns();
+                    } else {
+                        resultsTitle.innerHTML = 'Tidak menemukan produk untuk "<strong>' + query + '</strong>"';
+                        resultsCount.textContent = 'Coba gunakan kata kunci lain';
+                        resultsGrid.innerHTML = '<div style="grid-column: 1 / -1; text-align: center; padding: 40px; color: #666;">Maaf, AI kami tidak dapat menemukan produk yang sesuai.</div>';
+                    }
+                }, 1000);
+            };
+
+            searchBtn.addEventListener('click', () => performAISearch(searchInput.value));
+            searchInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') performAISearch(searchInput.value);
+            });
+            chips.forEach(chip => chip.addEventListener('click', () => performAISearch(chip.textContent)));
+        });
+    </script>
+</body>
+</html>

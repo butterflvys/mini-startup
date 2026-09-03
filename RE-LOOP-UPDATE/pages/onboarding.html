@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preferensi Belanja | RE-LOOP</title>
+    <meta name="description" content="Pilih kategori dan gaya favoritmu agar kami bisa menampilkan produk yang paling sesuai.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body class="onboarding-page-body">
+
+    <!-- Navbar Khusus Onboarding -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="../index.html" class="logo">
+                <div class="logo-icon"><img src="../assets/logo.png" alt="RE-LOOP Logo"></div>
+                <div class="logo-text"><span class="brand-title">RE - LOOP</span></div>
+            </a>
+            
+            <div style="flex: 1;"></div> <!-- Spacer -->
+
+            <div class="nav-actions">
+                <a href="profile.html" class="action-icon-btn" id="userProfileBtn" title="Profil Akun">
+                    <i class="ri-user-3-line"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Onboarding Content -->
+    <main class="onboarding-main">
+        <div class="onboarding-content-wrapper">
+            <h1 class="onboarding-title">Apa yang Kamu Cari?</h1>
+            <p class="onboarding-subtitle">Pilih kategori dan gaya favoritmu agar kami bisa menampilkan produk yang paling sesuai.</p>
+
+            <!-- Category Grid -->
+            <div class="onboarding-category-grid" id="categoryGrid">
+                <button class="onboarding-cat-card" data-category="fashion-pria">
+                    <div class="cat-card-icon">
+                        <i class="ri-t-shirt-2-line"></i>
+                    </div>
+                    <span class="cat-card-label">Men's Fashion</span>
+                </button>
+
+                <button class="onboarding-cat-card" data-category="fashion-wanita">
+                    <div class="cat-card-icon">
+                        <i class="ri-shirt-line"></i>
+                    </div>
+                    <span class="cat-card-label">Women's Fashion</span>
+                </button>
+
+                <button class="onboarding-cat-card" data-category="Technology">
+                    <div class="cat-card-icon">
+                        <i class="ri-smartphone-line"></i>
+                    </div>
+                    <span class="cat-card-label">Technology</span>
+                </button>
+
+                <button class="onboarding-cat-card" data-category="Shoes">
+                    <div class="cat-card-icon">
+                        <i class="ri-footprint-line"></i>
+                    </div>
+                    <span class="cat-card-label">Shoes</span>
+                </button>
+
+                <button class="onboarding-cat-card" data-category="Health">
+                    <div class="cat-card-icon">
+                        <i class="ri-heart-pulse-line"></i>
+                    </div>
+                    <span class="cat-card-label">Health</span>
+                </button>
+
+                <button class="onboarding-cat-card" data-category="Beauty">
+                    <div class="cat-card-icon">
+                        <i class="ri-sparkling-2-line"></i>
+                    </div>
+                    <span class="cat-card-label">Beauty & Perawatan</span>
+                </button>
+
+                <button class="onboarding-cat-card" data-category="Sports">
+                    <div class="cat-card-icon">
+                        <i class="ri-riding-line"></i>
+                    </div>
+                    <span class="cat-card-label">Sports & Outdoor</span>
+                </button>
+
+                <button class="onboarding-cat-card" data-category="musik">
+                    <div class="cat-card-icon">
+                        <i class="ri-music-2-line"></i>
+                    </div>
+                    <span class="cat-card-label">Musical Instruments</span>
+                </button>
+
+                <button class="onboarding-cat-card" data-category="ramah-lingkungan">
+                    <div class="cat-card-icon">
+                        <i class="ri-leaf-line"></i>
+                    </div>
+                    <span class="cat-card-label">Produk Ramah Lingkungan</span>
+                </button>
+            </div>
+
+            <!-- Footer Action Buttons -->
+            <div class="onboarding-footer-actions">
+                <button class="btn-onboard-skip" id="onboardSkipBtn">Lewati</button>
+                <button class="btn-onboard-next" id="onboardNextBtn">Lanjut</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="../js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Redirect if not logged in
+            if (typeof isUserLoggedIn === 'function' && !isUserLoggedIn()) {
+                window.location.href = 'login.html';
+                return;
+            }
+
+            // Update avatar title
+            const savedUser = sessionStorage.getItem('reloop_user') || '';
+            const avatarBtn = document.getElementById('userProfileBtn');
+            if (avatarBtn && savedUser) {
+                avatarBtn.title = 'Profil Akun (' + savedUser + ')';
+            }
+
+            // Category toggle — max 3 selections
+            const MAX_SELECT = 3;
+            const catCards = document.querySelectorAll('.onboarding-cat-card');
+            const nextBtn = document.getElementById('onboardNextBtn');
+            const skipBtn = document.getElementById('onboardSkipBtn');
+
+            // Inject selection counter badge
+            const counterEl = document.createElement('div');
+            counterEl.id = 'selectionCounter';
+            counterEl.style.cssText = `
+                font-size: 0.8rem; font-weight: 700; color: #94A3B8;
+                margin-bottom: 14px; transition: color 0.2s;
+            `;
+            counterEl.textContent = `Pilih hingga ${MAX_SELECT} kategori (0/${MAX_SELECT} dipilih)`;
+            document.querySelector('.onboarding-category-grid').before(counterEl);
+
+            function updateState() {
+                const selected = document.querySelectorAll('.onboarding-cat-card.selected').length;
+                const atLimit = selected >= MAX_SELECT;
+
+                // Update counter text & color
+                counterEl.textContent = `Pilih hingga ${MAX_SELECT} kategori (${selected}/${MAX_SELECT} dipilih)`;
+                counterEl.style.color = atLimit ? '#EA580C' : '#94A3B8';
+                counterEl.style.fontWeight = atLimit ? '800' : '700';
+
+                // Dim and disable un-selected cards when limit reached
+                catCards.forEach(c => {
+                    if (!c.classList.contains('selected')) {
+                        c.style.opacity = atLimit ? '0.4' : '1';
+                        c.style.pointerEvents = atLimit ? 'none' : 'auto';
+                    } else {
+                        c.style.opacity = '1';
+                        c.style.pointerEvents = 'auto';
+                    }
+                });
+
+                nextBtn.classList.toggle('has-selection', selected > 0);
+            }
+
+            catCards.forEach(card => {
+                card.addEventListener('click', () => {
+                    const selected = document.querySelectorAll('.onboarding-cat-card.selected').length;
+                    if (!card.classList.contains('selected') && selected >= MAX_SELECT) return;
+                    card.classList.toggle('selected');
+                    updateState();
+                });
+            });
+
+            updateState();
+
+            // Skip
+            skipBtn.addEventListener('click', () => {
+                sessionStorage.setItem('reloop_onboarding_done', 'true');
+                const redirectParam = new URLSearchParams(window.location.search).get('redirect');
+                if (redirectParam && redirectParam.includes('.html')) {
+                    window.location.href = redirectParam;
+                } else {
+                    window.location.href = '../index.html';
+                }
+            });
+
+            // Next / Finish
+            nextBtn.addEventListener('click', () => {
+                const selectedCats = [...document.querySelectorAll('.onboarding-cat-card.selected')]
+                    .map(c => c.getAttribute('data-category'));
+                sessionStorage.setItem('reloop_preferences', JSON.stringify(selectedCats));
+                sessionStorage.setItem('reloop_onboarding_done', 'true');
+                const redirectParam = new URLSearchParams(window.location.search).get('redirect');
+                window.location.href = (redirectParam && redirectParam.includes('.html')) ? redirectParam : '../index.html';
+            });
+        });
+    </script>
+</body>
+
+</html>
+
+

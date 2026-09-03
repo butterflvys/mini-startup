@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment | RE-LOOP</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body class="checkout-page-body">
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="../index.html" class="logo">
+                <div class="logo-icon"><img src="../assets/logo.png" alt="RE-LOOP Logo"></div>
+                <div class="logo-text"><span class="brand-title">RE - LOOP</span></div>
+            </a>
+                        <nav class="nav-menu" id="navMenu">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="shop.html" class="nav-link" id="shopNavLink">Shop</a>
+                <div class="nav-dropdown">
+                    <a href="category.html" class="nav-link">Categories</a>
+                </div>
+                <a href="top-products.html" class="nav-link nav-ai-link">
+                    <i class="ri-sparkles-fill ai-sparkle-icon"></i> AI Rekomendasi
+                </a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            <div class="nav-search-wrapper">
+                <input type="text" id="quickSearchInput" placeholder="Search products...">
+                <button class="nav-search-btn" id="quickSearchBtn" title="Search"><i class="ri-search-line"></i></button>
+            </div>
+            <div class="nav-actions">
+                <button class="action-icon-btn" id="cartBtn" title="Shopping Cart">
+                    <i class="ri-shopping-cart-2-line"></i>
+                    <span class="cart-count">0</span>
+                </button>
+                <div class="notif-btn-wrapper">
+                    <button class="action-icon-btn" title="Notifications"><i class="ri-notification-3-line"></i></button>
+                </div>
+                <a href="login.html" class="action-icon-btn" id="userProfileBtn" title="Login to Account">
+                    <i class="ri-user-3-line"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="checkout-main">
+        <div class="checkout-container">
+            
+            <div class="checkout-header-area">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+                    <h1 class="checkout-page-title" style="margin-bottom: 0;">Checkout</h1>
+                    <a href="checkout.html" style="text-decoration: none; color: var(--primary-color); font-weight: 600; display: flex; align-items: center; gap: 8px;">
+                        <i class="ri-arrow-left-line"></i> Kembali ke Pengiriman
+                    </a>
+                </div>
+                <div class="checkout-stepper">
+                    <div class="step">
+                        <span class="step-num">1</span>
+                        <span class="step-label">Pengiriman</span>
+                    </div>
+                    <div class="step-line"></div>
+                    <div class="step active">
+                        <span class="step-num">2</span>
+                        <span class="step-label">Pembayaran</span>
+                    </div>
+                    <div class="step-line"></div>
+                    <div class="step">
+                        <span class="step-num">3</span>
+                        <span class="step-label">Review</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checkout-layout">
+                <!-- Left Column: Form -->
+                <div class="checkout-left-col">
+                    
+                    <div class="checkout-section">
+                        <h2 class="checkout-section-title">Pilih Metode Pembayaran</h2>
+                        
+                        <div style="display: flex; flex-direction: column; gap: 16px;">
+                            <!-- QRIS -->
+                            <label style="display: flex; align-items: center; gap: 16px; padding: 16px; border: 1px solid #E2E8F0; border-radius: 12px; cursor: pointer; transition: all 0.2s;">
+                                <input type="radio" name="payment_method" value="qris" checked style="accent-color: var(--primary-color); transform: scale(1.2);">
+                                <div style="display: flex; align-items: center; gap: 12px; flex: 1;">
+                                    <i class="ri-qr-code-line" style="font-size: 24px; color: var(--primary-color);"></i>
+                                    <div>
+                                        <div style="font-weight: 600; color: #1E293B;">QRIS</div>
+                                        <div style="font-size: 0.85rem; color: #64748B;">Scan QR code (All Payment Apps)</div>
+                                    </div>
+                                </div>
+                            </label>
+
+                            <div style="font-weight: 700; color: #1E293B; margin-top: 8px;">E-Wallet</div>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                                <!-- GoPay -->
+                                <label style="display: flex; align-items: center; gap: 12px; padding: 12px; border: 1px solid #E2E8F0; border-radius: 12px; cursor: pointer;">
+                                    <input type="radio" name="payment_method" value="gopay" style="accent-color: var(--primary-color);">
+                                    <i class="ri-wallet-3-fill" style="font-size: 20px; color: #00AED6;"></i>
+                                    <div style="font-weight: 600; font-size: 0.95rem; color: #1E293B;">GoPay</div>
+                                </label>
+                                <!-- OVO -->
+                                <label style="display: flex; align-items: center; gap: 12px; padding: 12px; border: 1px solid #E2E8F0; border-radius: 12px; cursor: pointer;">
+                                    <input type="radio" name="payment_method" value="ovo" style="accent-color: var(--primary-color);">
+                                    <i class="ri-wallet-3-fill" style="font-size: 20px; color: #4C2A86;"></i>
+                                    <div style="font-weight: 600; font-size: 0.95rem; color: #1E293B;">OVO</div>
+                                </label>
+                                <!-- DANA -->
+                                <label style="display: flex; align-items: center; gap: 12px; padding: 12px; border: 1px solid #E2E8F0; border-radius: 12px; cursor: pointer;">
+                                    <input type="radio" name="payment_method" value="dana" style="accent-color: var(--primary-color);">
+                                    <i class="ri-wallet-3-fill" style="font-size: 20px; color: #118EE9;"></i>
+                                    <div style="font-weight: 600; font-size: 0.95rem; color: #1E293B;">DANA</div>
+                                </label>
+                                <!-- ShopeePay -->
+                                <label style="display: flex; align-items: center; gap: 12px; padding: 12px; border: 1px solid #E2E8F0; border-radius: 12px; cursor: pointer;">
+                                    <input type="radio" name="payment_method" value="shopeepay" style="accent-color: var(--primary-color);">
+                                    <i class="ri-wallet-3-fill" style="font-size: 20px; color: #EE4D2D;"></i>
+                                    <div style="font-weight: 600; font-size: 0.95rem; color: #1E293B;">ShopeePay</div>
+                                </label>
+                            </div>
+
+                            <div style="font-weight: 700; color: #1E293B; margin-top: 8px;">Transfer Bank (Virtual Account)</div>
+                            
+                            <!-- BCA -->
+                            <label style="display: flex; align-items: center; gap: 16px; padding: 16px; border: 1px solid #E2E8F0; border-radius: 12px; cursor: pointer; transition: all 0.2s;">
+                                <input type="radio" name="payment_method" value="bca" style="accent-color: var(--primary-color); transform: scale(1.2);">
+                                <div style="display: flex; align-items: center; gap: 12px; flex: 1;">
+                                    <i class="ri-bank-fill" style="font-size: 24px; color: #0066AE;"></i>
+                                    <div>
+                                        <div style="font-weight: 600; color: #1E293B;">BCA Virtual Account</div>
+                                    </div>
+                                </div>
+                            </label>
+
+                            <!-- Mandiri -->
+                            <label style="display: flex; align-items: center; gap: 16px; padding: 16px; border: 1px solid #E2E8F0; border-radius: 12px; cursor: pointer; transition: all 0.2s;">
+                                <input type="radio" name="payment_method" value="mandiri" style="accent-color: var(--primary-color); transform: scale(1.2);">
+                                <div style="display: flex; align-items: center; gap: 12px; flex: 1;">
+                                    <i class="ri-bank-fill" style="font-size: 24px; color: #003D79;"></i>
+                                    <div>
+                                        <div style="font-weight: 600; color: #1E293B;">Mandiri Virtual Account</div>
+                                    </div>
+                                </div>
+                            </label>
+
+                            <!-- BNI -->
+                            <label style="display: flex; align-items: center; gap: 16px; padding: 16px; border: 1px solid #E2E8F0; border-radius: 12px; cursor: pointer; transition: all 0.2s;">
+                                <input type="radio" name="payment_method" value="bni" style="accent-color: var(--primary-color); transform: scale(1.2);">
+                                <div style="display: flex; align-items: center; gap: 12px; flex: 1;">
+                                    <i class="ri-bank-fill" style="font-size: 24px; color: #F15A23;"></i>
+                                    <div>
+                                        <div style="font-weight: 600; color: #1E293B;">BNI Virtual Account</div>
+                                    </div>
+                                </div>
+                            </label>
+
+                            <!-- BRI -->
+                            <label style="display: flex; align-items: center; gap: 16px; padding: 16px; border: 1px solid #E2E8F0; border-radius: 12px; cursor: pointer; transition: all 0.2s;">
+                                <input type="radio" name="payment_method" value="bri" style="accent-color: var(--primary-color); transform: scale(1.2);">
+                                <div style="display: flex; align-items: center; gap: 12px; flex: 1;">
+                                    <i class="ri-bank-fill" style="font-size: 24px; color: #00529C;"></i>
+                                    <div>
+                                        <div style="font-weight: 600; color: #1E293B;">BRI Virtual Account</div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="checkout-actions">
+                        <button class="checkout-continue-btn" id="proceedToPayBtn">
+                            <i class="ri-secure-payment-line"></i> Bayar Sekarang
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right Column: Order Summary -->
+                <div class="checkout-right-col">
+                    <div class="checkout-summary-box">
+                        <h2 class="checkout-summary-title">Pesanan Anda</h2>
+                        <div class="checkout-items-list" id="checkoutItemsList">
+                            <!-- Items will be populated here via JS -->
+                        </div>
+                        
+                        <div class="checkout-summary-divider"></div>
+                        
+                        <div class="checkout-summary-row">
+                            <span class="summary-label">Subtotal</span>
+                            <span class="summary-val" id="checkoutSubtotal">Rp 0</span>
+                        </div>
+                        <div class="checkout-summary-row">
+                            <span class="summary-label">Ongkir</span>
+                            <span class="summary-val-highlight" id="checkoutShipping">Gratis</span>
+                        </div>
+                        
+                        <div class="checkout-summary-total">
+                            <span class="total-label">TOTAL</span>
+                            <span class="total-val" id="checkoutTotal">Rp 0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Checkout Modal from Cart (reused for final confirmation) -->
+    <div class="cart-modal-overlay" id="checkoutModal">
+        <div class="cart-modal-box">
+            <div class="cart-modal-icon">
+                <i class="ri-checkbox-circle-fill"></i>
+            </div>
+            <h2 class="cart-modal-title">Pesanan Berhasil!</h2>
+            <p class="cart-modal-desc">Terima kasih telah berbelanja di <strong>RE-LOOP</strong>. Pesanan Anda sedang diproses dan akan segera dikirimkan.</p>
+            <div class="cart-modal-order-id">Order ID: <span id="orderId">RL-2024-XXXXX</span></div>
+            <button class="cart-modal-btn" id="checkoutOkBtn">Kembali ke Beranda</button>
+        </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            syncNavbarAuthState();
+            initNotificationSystem();
+            
+            // Load and render cart items
+            const cartItems = getCartItems().filter(i => i.selected !== false); // only checkout selected items
+            const listEl = document.getElementById('checkoutItemsList');
+            let subtotal = 0;
+
+            if (cartItems.length === 0) {
+                listEl.innerHTML = `
+                    <div style="text-align:center; padding: 40px 10px;">
+                        <i class="ri-shopping-cart-2-line" style="font-size: 48px; color: #CBD5E1; margin-bottom: 16px; display: block;"></i>
+                        <p style="color:#94A3B8; margin-bottom: 24px; font-weight: 500;">Belum ada pesanan.</p>
+                        <a href="../index.html" class="btn-outline-pill" style="display: inline-block; text-decoration: none;">Belanja Sekarang</a>
+                    </div>
+                `;
+            } else {
+                listEl.innerHTML = cartItems.map(item => {
+                    subtotal += (item.price * item.qty);
+                    return `
+                        <div class="checkout-item-row">
+                            <div class="checkout-item-img">
+                                <img src="${getAssetPath(item.image)}" alt="${item.name}">
+                            </div>
+                            <div class="checkout-item-details">
+                                <div class="checkout-item-name">${item.name}</div>
+                                <div class="checkout-item-qty">Qty: ${item.qty}</div>
+                                <div class="checkout-item-price">Rp ${(item.price * item.qty).toLocaleString('id-ID')}</div>
+                            </div>
+                        </div>
+                    `;
+                }).join('');
+            }
+
+            // Calculations
+            let shipping = cartItems.length > 0 ? 0 : 0; // Assume free shipping for now or get from prev step
+            let total = subtotal + shipping;
+            
+            document.getElementById('checkoutSubtotal').textContent = 'Rp ' + subtotal.toLocaleString('id-ID');
+            document.getElementById('checkoutTotal').textContent = 'Rp ' + total.toLocaleString('id-ID');
+            document.getElementById('checkoutShipping').textContent = shipping === 0 ? '0' : ('Rp ' + shipping.toLocaleString('id-ID'));
+            
+            const badges = document.querySelectorAll('.cart-count');
+            const totalQty = getCartItems().reduce((s, i) => s + (i.qty || 1), 0);
+            badges.forEach(b => { b.textContent = totalQty; });
+
+            // Button Action
+            document.getElementById('proceedToPayBtn').addEventListener('click', () => {
+                if(cartItems.length === 0) {
+                    alert("Keranjang anda kosong!");
+                    return;
+                }
+                const orderId = 'RL-' + new Date().getFullYear() + '-' + Math.random().toString(36).substring(2, 7).toUpperCase();
+                document.getElementById('orderId').textContent = orderId;
+                
+                // Clear selected items from cart
+                let fullCart = getCartItems();
+                fullCart = fullCart.filter(i => i.selected === false);
+                saveCartItems(fullCart);
+
+                document.getElementById('checkoutModal').classList.add('active');
+            });
+
+            document.getElementById('checkoutOkBtn').addEventListener('click', () => {
+                window.location.href = '../index.html';
+            });
+        });
+    </script>
+</body>
+</html>
+
+

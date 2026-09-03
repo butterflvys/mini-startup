@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RE-LOOP | Platform Bandingkan Harga & Review Marketplace Indonesia</title>
+    <meta name="description"
+        content="Bandingkan harga barang impian Anda dari Tokopedia, Shopee, Blibli, Lazada, dan marketplace Indonesia lainnya. Dilengkapi analisis review pintar AI.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500&display=swap"
+        rel="stylesheet">
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <!-- Top Announcement Bar -->
+    <div class="top-announcement-bar">
+        <div class="container announcement-content">
+            <i class="ri-truck-line"></i>
+            <span>Free Shipping on Orders Over $99</span>
+        </div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <!-- Brand Logo (Original RE-LOOP logo preserved) -->
+            <a href="../index.html" class="logo">
+                <div class="logo-icon">
+                    <img src="../assets/logo.png" alt="logo">
+                </div>
+                <div class="logo-text">
+                    <span class="brand-title">RE - LOOP</span>
+                </div>
+            </a>
+
+            <!-- Nav Links -->
+                        <nav class="nav-menu" id="navMenu">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="shop.html" class="nav-link" id="shopNavLink">Shop</a>
+                <div class="nav-dropdown">
+                    <a href="category.html" class="nav-link">Categories</a>
+                </div>
+                <a href="top-products.html" class="nav-link nav-ai-link">
+                    <i class="ri-sparkles-fill ai-sparkle-icon"></i> AI Rekomendasi
+                </a>
+                <a href="about.html" class="nav-link active">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <!-- Nav Search Bar -->
+            <div class="nav-search-wrapper">
+                <input type="text" id="quickSearchInput" placeholder="Search products...">
+                <button class="nav-search-btn" title="Search">
+                    <i class="ri-search-line"></i>
+                </button>
+            </div>
+
+            <!-- Right: Cart + Notification + Profile -->
+            <div class="nav-actions">
+                <button class="action-icon-btn" id="cartBtn" title="Shopping Cart">
+                    <i class="ri-shopping-cart-2-line"></i>
+                    <span class="cart-count">2</span>
+                </button>
+                <button class="action-icon-btn" title="Notifications">
+                    <i class="ri-notification-3-line"></i>
+                </button>
+                <a href="login.html" class="action-icon-btn" id="userProfileBtn" title="Login to Account">
+                    <i class="ri-user-3-line"></i>
+                </a>
+            </div>
+        </div>
+    </header><main style="padding: 60px 0 100px; background-color: #FAFAFA; min-height: 70vh;">
+    <div class="container">
+        <!-- Hero About -->
+        <div style="text-align: center; margin-bottom: 60px;">
+            <h1 style="font-size: 3rem; font-weight: 800; margin-bottom: 20px; color: #111;">Tentang RE-LOOP</h1>
+            <p style="font-size: 1.1rem; color: #666; max-width: 600px; margin: 0 auto; line-height: 1.6;">Kami hadir untuk mendefinisikan ulang pengalaman belanja online Anda. Membawa produk berkualitas terbaik dengan penawaran yang tidak pernah mengecewakan.</p>
+        </div>
+
+        <!-- Vision/Mission -->
+        <div style="background: white; border-radius: 16px; padding: 40px; box-shadow: 0 4px 20px rgba(0,0,0,0.03); margin-bottom: 60px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
+            <div>
+                <h2 style="font-size: 2rem; font-weight: 700; margin-bottom: 16px; color: #F2542D;">Visi Kami</h2>
+                <p style="font-size: 1rem; color: #555; line-height: 1.8; margin-bottom: 30px;">Menjadi platform e-commerce terdepan di Indonesia yang tidak hanya mengedepankan kecepatan dan efisiensi, tetapi juga kualitas produk dan kepuasan pelanggan di setiap transaksi.</p>
+                <h2 style="font-size: 2rem; font-weight: 700; margin-bottom: 16px; color: #F2542D;">Misi Kami</h2>
+                <ul style="font-size: 1rem; color: #555; line-height: 1.8; padding-left: 20px;">
+                    <li>Menyediakan kurasi produk terbaik dari berbagai kategori.</li>
+                    <li>Membangun ekosistem belanja yang aman dan transparan.</li>
+                    <li>Memberikan dukungan pelanggan 24/7 yang solutif.</li>
+                </ul>
+            </div>
+            <div>
+                <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=600&q=80" alt="About RE-LOOP" style="width: 100%; border-radius: 12px; object-fit: cover; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+            </div>
+        </div>
+
+        <!-- Core Values -->
+        <div style="text-align: center; margin-bottom: 40px;">
+            <h2 style="font-size: 2.2rem; font-weight: 800; margin-bottom: 40px;">Nilai Inti Kami</h2>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;">
+                <div style="background: white; padding: 40px 20px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.02);">
+                    <i class="ri-shield-check-fill" style="font-size: 3rem; color: #F2542D; margin-bottom: 20px; display: inline-block;"></i>
+                    <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 10px;">Kualitas Terjamin</h3>
+                    <p style="color: #666; line-height: 1.6;">Semua produk melewati tahap kurasi dan verifikasi untuk menjamin standar kualitas terbaik.</p>
+                </div>
+                <div style="background: white; padding: 40px 20px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.02);">
+                    <i class="ri-rocket-2-fill" style="font-size: 3rem; color: #F2542D; margin-bottom: 20px; display: inline-block;"></i>
+                    <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 10px;">Pengiriman Cepat</h3>
+                    <p style="color: #666; line-height: 1.6;">Bekerja sama dengan logistik terbaik agar pesanan Anda tiba tepat waktu tanpa kompromi.</p>
+                </div>
+                <div style="background: white; padding: 40px 20px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.02);">
+                    <i class="ri-customer-service-2-fill" style="font-size: 3rem; color: #F2542D; margin-bottom: 20px; display: inline-block;"></i>
+                    <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 10px;">Fokus Pelanggan</h3>
+                    <p style="color: #666; line-height: 1.6;">Kepuasan Anda adalah prioritas utama kami. Tim dukungan kami siap melayani Anda kapan saja.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main><footer class="footer" id="footer">
+        <div class="container footer-container">
+            <div class="footer-col brand-col">
+                <a href="#" class="footer-logo">
+                    <div class="logo-icon footer-logo-icon">
+                        <svg viewBox="0 0 240 240" class="reloop-svg-official">
+                            <path d="M 20 15 L 60 15 L 60 180 L 20 220 Z" fill="url(#reloopGrad1_nav)" />
+                            <path
+                                d="M 60 15 L 125 15 C 165 15 175 60 150 90 C 130 115 90 120 70 120 L 95 95 L 45 125 L 95 155 L 70 130 C 110 130 185 120 195 65 C 205 10 125 15 125 15 Z"
+                                fill="url(#reloopGrad1_nav)" />
+                            <path
+                                d="M 160 100 L 160 170 C 160 195 175 205 195 205 L 210 205 L 195 185 L 235 212 L 195 240 L 210 220 L 190 220 C 150 220 142 195 142 165 L 142 100 Z"
+                                fill="url(#reloopGrad2_nav)" />
+                        </svg>
+                    </div>
+                    <span class="brand-title">RE - LOOP</span>
+                </a>
+                <p class="footer-about">
+                    Bandingkan harga & review produk terbaik dari berbagai marketplace Indonesia dalam satu platform
+                    pintar.
+                </p>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+                    <a href="#" aria-label="Twitter/X"><i class="ri-twitter-x-line"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="ri-youtube-line"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-heading">SHOP</h4>
+                <ul class="footer-links">
+                    <li><a href="#">All Products</a></li>
+                    <li><a href="#">Designer Choices</a></li>
+                    <li><a href="#">Featured Items</a></li>
+                    <li><a href="#">Outlet Sales</a></li>
+                    <li><a href="#">Gift Card</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-heading">SUPPORT</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Returns & Exchanges</a></li>
+                    <li><a href="#">Safety and Security</a></li>
+                    <li><a href="#">Quick FAQs</a></li>
+                    <li><a href="#">Contact Support</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-heading">OUR STORY</h4>
+                <ul class="footer-links">
+                    <li><a href="#">The Brand</a></li>
+                    <li><a href="#">Eco-conscious Guarantee</a></li>
+                    <li><a href="#">Stores & Partnership</a></li>
+                    <li><a href="#">The Courier</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container footer-bottom-container">
+                <p>&copy; 2026 RE-LOOP Marketplace. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookies Setting</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Price Comparison Modal Overlay -->
+    <div class="modal-overlay" id="compareModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalCloseBtn">&times;</button>
+            <div class="modal-header">
+                <span class="modal-badge"><i class="ri-scales-3-line"></i> Real-Time Price Comparison</span>
+                <h3 id="modalProductTitle" class="modal-title">Apple iPhone 13 Pro 128GB</h3>
+            </div>
+            <div class="modal-body">
+                <div class="store-comparison-list" id="storeList">
+                    <!-- Dynamic store items will be injected by JS -->
+                </div>
+            </div>
+        </div>
+        <!-- User Profile Settings Modal Overlay (Matching Reference Image) -->
+        <div class="modal-overlay profile-modal-overlay" id="profileModal">
+            <div class="profile-dashboard-card">
+                <!-- Sidebar (Left) -->
+                <aside class="profile-sidebar">
+                    <button class="profile-back-btn" id="profileBackBtn">
+                        <i class="ri-arrow-left-s-line"></i> Back
+                    </button>
+
+                    <nav class="profile-menu">
+                        <!-- Expandable Group: General -->
+                        <div class="menu-group">
+                            <div class="menu-group-header">
+                                <span><i class="ri-settings-4-line"></i> General</span>
+                                <i class="ri-arrow-down-s-line"></i>
+                            </div>
+                            <ul class="menu-sub-items">
+                                <li><a href="#profileModal" class="profile-tab-link active" data-tab="account"><i
+                                            class="ri-user-line"></i> Account</a></li>
+                                <li><a href="#profileModal" class="profile-tab-link" data-tab="password"><i
+                                            class="ri-key-2-line"></i> Password</a></li>
+                                <li><a href="#profileModal" class="profile-tab-link" data-tab="connected"><i
+                                            class="ri-links-line"></i> Connected accounts</a></li>
+                                <li><a href="#profileModal" class="profile-tab-link" data-tab="sessions"><i
+                                            class="ri-macbook-line"></i> Sessions</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Single Menu Items -->
+                        <a href="#profileModal" class="menu-single-item profile-tab-link" data-tab="billing">
+                            <i class="ri-bank-card-line"></i> Billing
+                        </a>
+                        <a href="#profileModal" class="menu-single-item profile-tab-link" data-tab="credits">
+                            <i class="ri-gift-line"></i> Credits
+                        </a>
+                        <a href="#profileModal" class="menu-single-item profile-tab-link" data-tab="integrations">
+                            <i class="ri-apps-2-line"></i> Integrations
+                        </a>
+                        <a href="#profileModal" class="menu-single-item profile-tab-link" data-tab="appearance">
+                            <i class="ri-palette-line"></i> Appearance
+                        </a>
+                        <a href="#profileModal" class="menu-single-item profile-tab-link" data-tab="notifications">
+                            <i class="ri-notification-3-line"></i> Notifications
+                        </a>
+                        <a href="#profileModal" class="menu-single-item profile-tab-link" data-tab="archives">
+                            <i class="ri-archive-line"></i> Archives
+                        </a>
+                    </nav>
+                </aside>
+
+                <!-- Main Content Area (Right) -->
+                <main class="profile-main-content">
+                    <!-- Top Header Bar inside Dashboard -->
+                    <header class="profile-content-header">
+                        <div class="breadcrumb-trail">
+                            <span>Home</span> <i class="ri-arrow-right-s-line"></i>
+                            <span>Settings</span> <i class="ri-arrow-right-s-line"></i>
+                            <span class="current-crumb" id="currentTabBreadcrumb">Account</span>
+                        </div>
+                        <div class="header-right-actions">
+                            <button class="icon-circle-btn" title="Notifications">
+                                <i class="ri-notification-3-line"></i>
+                            </button>
+                            <div class="avatar-small-header">
+                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80"
+                                    alt="User Avatar">
+                            </div>
+                        </div>
+                    </header>
+
+                    <!-- Dynamic Tab Pane: Account -->
+                    <div class="tab-pane active" id="tab-account">
+                        <h2 class="profile-page-title">Account</h2>
+
+                        <!-- Avatar Edit Section -->
+                        <div class="avatar-edit-wrapper">
+                            <div class="profile-avatar-box">
+                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80"
+                                    alt="Christopher Davis" id="userAvatarImg">
+                            </div>
+                            <button class="btn-edit-avatar" id="editAvatarBtn">Edit</button>
+                        </div>
+
+                        <!-- Form Inputs Grid -->
+                        <form class="profile-form-grid" id="accountSettingsForm">
+                            <div class="form-group">
+                                <label class="form-label">Username</label>
+                                <input type="text" class="form-input" value="ChristDavis" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Full name</label>
+                                <input type="text" class="form-input" value="Christopher Davis" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Email</label>
+                                <input type="email" class="form-input" value="christopdev@gmail.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Time zone</label>
+                                <div class="select-wrapper">
+                                    <select class="form-select">
+                                        <option selected>Europe/Rome (GMT +02:00)</option>
+                                        <option>Asia/Jakarta (GMT +07:00)</option>
+                                        <option>America/New_York (GMT -04:00)</option>
+                                        <option>Asia/Tokyo (GMT +09:00)</option>
+                                    </select>
+                                    <i class="ri-arrow-down-s-line select-arrow"></i>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Time format</label>
+                                <div class="select-wrapper">
+                                    <select class="form-select">
+                                        <option selected>Browser default</option>
+                                        <option>12-hour (1:00 PM)</option>
+                                        <option>24-hour (13:00)</option>
+                                    </select>
+                                    <i class="ri-arrow-down-s-line select-arrow"></i>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Start of the week</label>
+                                <div class="select-wrapper">
+                                    <select class="form-select">
+                                        <option selected>Sunady (Browser default)</option>
+                                        <option>Monday</option>
+                                    </select>
+                                    <i class="ri-arrow-down-s-line select-arrow"></i>
+                                </div>
+                            </div>
+                            <div class="form-group full-width">
+                                <label class="form-label">Language</label>
+                                <div class="select-wrapper">
+                                    <select class="form-select">
+                                        <option selected>Browser default</option>
+                                        <option>Bahasa Indonesia</option>
+                                        <option>English (US)</option>
+                                    </select>
+                                    <i class="ri-arrow-down-s-line select-arrow"></i>
+                                </div>
+                            </div>
+
+                            <div class="form-actions full-width">
+                                <button type="submit" class="btn-dark-update" id="updateProfileBtn">Update</button>
+                            </div>
+                        </form>
+                    </div>
+                </main>
+            </div>
+        </div>
+
+        <!-- Main Script -->
+        <script src="../js/script.js"></script>
+</body>
+
+</html>
+
